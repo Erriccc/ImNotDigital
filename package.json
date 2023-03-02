@@ -1,0 +1,21 @@
+{
+  "name": "imnotdigitalmvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.10.1",
+    "next": "13.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "prisma": "^4.10.1"
+  }
+}
