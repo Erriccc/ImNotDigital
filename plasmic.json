@@ -1,0 +1,240 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "js",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+      "projectApiToken": "MpawOQBsBGRaD4XyymVnekrIirmjaUKdhnQ7fYX8rvDD1Y9AxZMiU02qNcPqaAWWUxvLUrOJasDTgkqjs4g",
+      "projectName": "IMXbeanies",
+      "version": "latest",
+      "cssFilePath": "plasmic/im_xbeanies/plasmic_im_xbeanies.module.css",
+      "components": [
+        {
+          "id": "2QbDyMolKpzt",
+          "name": "ClaimPage",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicClaimPage.jsx",
+          "importSpec": {
+            "modulePath": "../pages/index.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "bQTkSbQm55",
+          "name": "ClaimButton",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicClaimButton.jsx",
+          "importSpec": {
+            "modulePath": "ClaimButton.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "0XcyjVyUyT",
+          "name": "FlexPage",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicFlexPage.jsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicFlexPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "40oQIk4rcZ",
+          "name": "BuyPage",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicBuyPage.jsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page-2.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicBuyPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "e8nCEUlLHb",
+          "name": "ButtonTextRoundBlackButton",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicButtonTextRoundBlackButton.jsx",
+          "importSpec": {
+            "modulePath": "ButtonTextRoundBlackButton.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicButtonTextRoundBlackButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "4PjNop8mQb",
+          "name": "RoundBlackButton",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicRoundBlackButton.jsx",
+          "importSpec": {
+            "modulePath": "RoundBlackButton.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicRoundBlackButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "AfiUy9xyrPK",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicTextInput.jsx",
+          "importSpec": {
+            "modulePath": "TextInput.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "text-input"
+        },
+        {
+          "id": "SBcIalM9fJh",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicButton.jsx",
+          "importSpec": {
+            "modulePath": "Button.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        },
+        {
+          "id": "M3bQRkfZiP",
+          "name": "_0XInputSpace",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/Plasmic_0XInputSpace.jsx",
+          "importSpec": {
+            "modulePath": "_0XInputSpace.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/Plasmic_0XInputSpace.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "0SLk0MG_H_",
+          "name": "_0XinputBox",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/Plasmic_0XinputBox.jsx",
+          "importSpec": {
+            "modulePath": "_0XinputBox.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/Plasmic_0XinputBox.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        }
+      ],
+      "icons": [
+        {
+          "id": "6RdOQRrPg",
+          "name": "Line1Icon",
+          "moduleFilePath": "plasmic/im_xbeanies/icons/PlasmicIcon__Line1.jsx"
+        },
+        {
+          "id": "k2w9DMtuZQA",
+          "name": "SearchsvgIcon",
+          "moduleFilePath": "plasmic/im_xbeanies/icons/PlasmicIcon__Searchsvg.jsx"
+        },
+        {
+          "id": "Etw_otJIc8D",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/im_xbeanies/icons/PlasmicIcon__Checksvg.jsx"
+        },
+        {
+          "id": "ZBXIjvBejTc",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/im_xbeanies/icons/PlasmicIcon__Icon.jsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "bT884vBoz",
+          "name": "imnotArt 4",
+          "filePath": "../public/plasmic/im_xbeanies/images/imnotArt4.png"
+        },
+        {
+          "id": "y1CjWm4LC",
+          "name": "image 3",
+          "filePath": "../public/plasmic/im_xbeanies/images/image3.png"
+        },
+        {
+          "id": "nHazR67vE",
+          "name": "greencheck.jpeg",
+          "filePath": "../public/plasmic/im_xbeanies/images/greencheckjpeg.jpeg"
+        },
+        {
+          "id": "UGE69ej3z",
+          "name": "ethDenverLogo.png",
+          "filePath": "../public/plasmic/im_xbeanies/images/ethDenverLogopng.png"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "OIT2sYHCNV",
+          "name": "PlasmicHead",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "pcp7802IP1",
+          "name": "Fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "CywHnA3LRZAXM",
+        "name": "Screen",
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "contextFilePath": "plasmic/im_xbeanies/PlasmicGlobalVariant__Screen.jsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.217",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.217/dist/plasmic.schema.json"
+}
