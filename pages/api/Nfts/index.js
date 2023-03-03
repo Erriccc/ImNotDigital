@@ -1,4 +1,5 @@
-import { createNft, getNfts } from '@/lib/prisma/Nfts'
+import { createNft, getNfts } from '@/nftModel'
+
 const handler = async (req, res) => {
   if (req.method === 'GET') {
     try {

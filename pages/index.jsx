@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getNfts } from '@/lib/prisma/Nfts'
+import { getNfts } from '@/nftModel'
 
 const Nfts = (props) => {
   // const { users } = await getUsers()

@@ -1,4 +1,4 @@
-import { getNftById } from "@/lib/prisma/Nfts"
+import { getNftById } from "@/nftModel"
 import ClaimedRouteWorker from '../../components/claimedRouteWorker'
 import ClaimAction from "../../components/claimflow"
 

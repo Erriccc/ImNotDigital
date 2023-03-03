@@ -1,4 +1,4 @@
-import { deleteNftById, getNfts, updateNftById } from '@/lib/prisma/Nfts'
+import { deleteNftById, getNfts, updateNftById } from '@/nftModel'
 
 const handler = async (req, res) => {
   if (req.method === 'PUT') {

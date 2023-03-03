@@ -1,6 +1,7 @@
 'use client';
 
-import { deleteNftById } from "@/lib/prisma/Nfts";
+import { deleteNftById } from '@/nftModel'
+
 import React, {useState, useEffect} from 'react';
 
 
