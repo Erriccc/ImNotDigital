@@ -1,7 +1,7 @@
 import { getNftById } from "@/lib/prisma/Nfts"
 import ClaimedRouteWorker from '../../components/claimedRouteWorker'
 import ClaimAction from "../../components/claimflow"
-
+import { ImmutableOrderStatus } from '@imtbl/imx-sdk';
 
 
 
@@ -39,6 +39,7 @@ import ClaimAction from "../../components/claimflow"
       </div>
       <ClaimAction nftId={nft.tagUid} claimed={nft.claimed}/>
        </main>
+       
     )
   }
   
