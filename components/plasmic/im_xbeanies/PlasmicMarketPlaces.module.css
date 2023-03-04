@@ -1,0 +1,44 @@
+.nfTmarkets {
+  width: 79px;
+  height: 22px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+.nfTmarkets > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(0px - 20px);
+  width: calc(100% + 20px);
+}
+.nfTmarkets > :global(.__wab_flex-container) > *,
+.nfTmarkets > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.nfTmarkets > :global(.__wab_flex-container) > picture > img,
+.nfTmarkets
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 20px;
+}
+.image1 {
+  background: url("/plasmic/im_xbeanies/images/image1.png") center center / cover no-repeat;
+  width: 22px;
+  height: 22px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}
+.image2 {
+  background: url("/plasmic/im_xbeanies/images/image2.png") center center / cover no-repeat;
+  width: 22px;
+  height: 22px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}

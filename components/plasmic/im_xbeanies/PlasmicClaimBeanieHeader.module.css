@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  width: 316px;
+  height: 77px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  position: relative;
+  justify-content: center;
+  flex-direction: row;
+}
+.slotTargetClaimText {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0em;
+}

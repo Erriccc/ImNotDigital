@@ -1,0 +1,13 @@
+.root {
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  width: auto;
+  height: auto;
+  position: relative;
+}

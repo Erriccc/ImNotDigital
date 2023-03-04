@@ -1,0 +1,44 @@
+.rectangle8 {
+  background: #89eaffbf;
+  transform: none;
+  width: 148.5px;
+  height: 31.26px;
+  display: flex;
+  transform-origin: top left;
+  backdrop-filter: blur(12px);
+  transition-property: all, all;
+  transition-duration: 1s, 1s;
+  cursor: pointer;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(12px);
+  -webkit-transition-property: all, all;
+  -webkit-transition-duration: 1s, 1s;
+  border-radius: 100px;
+  border: 1px solid #000000;
+}
+.rectangle8isVerified {
+  display: none;
+}
+.text {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 326.25px;
+  height: 18px;
+  transition-property: all;
+  transition-duration: 1s;
+  flex-shrink: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+}

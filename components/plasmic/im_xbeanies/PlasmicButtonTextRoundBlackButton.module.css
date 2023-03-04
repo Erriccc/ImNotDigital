@@ -1,0 +1,17 @@
+.root {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  width: 224px;
+  height: 15px;
+  transition-property: all;
+  transition-duration: 1s;
+  position: relative;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+}

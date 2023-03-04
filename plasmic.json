@@ -42,19 +42,6 @@
           "componentType": "page"
         },
         {
-          "id": "bQTkSbQm55",
-          "name": "ClaimButton",
-          "type": "managed",
-          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
-          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicClaimButton.jsx",
-          "importSpec": {
-            "modulePath": "ClaimButton.jsx"
-          },
-          "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimButton.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "0XcyjVyUyT",
           "name": "FlexPage",
           "type": "managed",
@@ -149,14 +136,183 @@
         },
         {
           "id": "0SLk0MG_H_",
-          "name": "_0XinputBox",
+          "name": "WalletconnectButton",
           "type": "managed",
           "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
-          "renderModuleFilePath": "plasmic/im_xbeanies/Plasmic_0XinputBox.jsx",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicWalletconnectButton.jsx",
           "importSpec": {
-            "modulePath": "_0XinputBox.jsx"
+            "modulePath": "WalletconnectButton.jsx"
           },
-          "cssFilePath": "plasmic/im_xbeanies/Plasmic_0XinputBox.module.css",
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicWalletconnectButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "UgLYtY_iEg",
+          "name": "ClaimBeanieHeader",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicClaimBeanieHeader.jsx",
+          "importSpec": {
+            "modulePath": "ClaimBeanieHeader.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimBeanieHeader.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "SRxjb5uqQx",
+          "name": "ClaimButton",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicClaimButton.jsx",
+          "importSpec": {
+            "modulePath": "ClaimButton.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "u1HD2iJpzl",
+          "name": "TestBttn",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicTestBttn.jsx",
+          "importSpec": {
+            "modulePath": "TestBttn.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicTestBttn.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "NlSaXhOoqK",
+          "name": "FlexPageHeader",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicFlexPageHeader.jsx",
+          "importSpec": {
+            "modulePath": "FlexPageHeader.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicFlexPageHeader.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Ij7BXkTnkp",
+          "name": "NftMintedCount",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicNftMintedCount.jsx",
+          "importSpec": {
+            "modulePath": "NftMintedCount.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicNftMintedCount.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "lNF5F5pVlN",
+          "name": "Socials",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicSocials.jsx",
+          "importSpec": {
+            "modulePath": "Socials.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicSocials.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "sGix8KYNyE",
+          "name": "MarketPlaces",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicMarketPlaces.jsx",
+          "importSpec": {
+            "modulePath": "MarketPlaces.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicMarketPlaces.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "bvKFXUs5yH",
+          "name": "VideoNft",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicVideoNft.jsx",
+          "importSpec": {
+            "modulePath": "VideoNft.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicVideoNft.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "m4sIZxxOB6c",
+          "name": "FlexPage2",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicFlexPage2.jsx",
+          "importSpec": {
+            "modulePath": "FlexPage2.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicFlexPage2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Xoe_b97VZI",
+          "name": "ImNotArtNav",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicImNotArtNav.jsx",
+          "importSpec": {
+            "modulePath": "ImNotArtNav.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicImNotArtNav.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "1zyzTuVyET",
+          "name": "ImNotArtFooter",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicImNotArtFooter.jsx",
+          "importSpec": {
+            "modulePath": "ImNotArtFooter.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicImNotArtFooter.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "XdrU4NtvKY",
+          "name": "SocialsText",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicSocialsText.jsx",
+          "importSpec": {
+            "modulePath": "SocialsText.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicSocialsText.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "7GW8h_hViQ",
+          "name": "Uid",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicUid.jsx",
+          "importSpec": {
+            "modulePath": "Uid.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicUid.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -185,11 +341,6 @@
       ],
       "images": [
         {
-          "id": "bT884vBoz",
-          "name": "imnotArt 4",
-          "filePath": "../public/plasmic/im_xbeanies/images/imnotArt4.png"
-        },
-        {
           "id": "y1CjWm4LC",
           "name": "image 3",
           "filePath": "../public/plasmic/im_xbeanies/images/image3.png"
@@ -203,6 +354,41 @@
           "id": "UGE69ej3z",
           "name": "ethDenverLogo.png",
           "filePath": "../public/plasmic/im_xbeanies/images/ethDenverLogopng.png"
+        },
+        {
+          "id": "bT884vBoz",
+          "name": "imnotArt 3",
+          "filePath": "../public/plasmic/im_xbeanies/images/imnotArt3.png"
+        },
+        {
+          "id": "9p0NIChNK",
+          "name": "image 1",
+          "filePath": "../public/plasmic/im_xbeanies/images/image1.png"
+        },
+        {
+          "id": "o7HMk4tL5T",
+          "name": "image 2",
+          "filePath": "../public/plasmic/im_xbeanies/images/image2.png"
+        },
+        {
+          "id": "ew4FyKKRnt",
+          "name": "image 4",
+          "filePath": "../public/plasmic/im_xbeanies/images/image4.png"
+        },
+        {
+          "id": "l7ysBHG3IR",
+          "name": "image 5",
+          "filePath": "../public/plasmic/im_xbeanies/images/image5.png"
+        },
+        {
+          "id": "uS1M93bKLT",
+          "name": "image 6",
+          "filePath": "../public/plasmic/im_xbeanies/images/image6.png"
+        },
+        {
+          "id": "sSI73-iCY",
+          "name": "Screen Shot 2023-02-28 at 9.10.03 PM.png",
+          "filePath": "../public/plasmic/im_xbeanies/images/screenShot20230228At91003PMpng.png"
         }
       ],
       "indirect": false,
@@ -219,6 +405,41 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         }
       ]
+    },
+    {
+      "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
+      "projectApiToken": "vXGGQpdi9fhcncabBdg8DcMRUbkz0iRW6HS1jzQufQR6QH0MasPwr9SX7ap4SsK3xXwwXmzZtglWGe0Rm2nw",
+      "projectName": "plasmic-basic-components",
+      "version": "3.13.0",
+      "cssFilePath": "plasmic/plasmic_basic_components/plasmic_plasmic_basic_components.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CMDBvOhaI4s",
+          "name": "Iframe",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "RhitNJW5Zu-",
+          "name": "Video",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "PKldDYkH42",
+          "name": "Embed",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "D4RbnlpRXg3",
+          "name": "DataProvider",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        }
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {

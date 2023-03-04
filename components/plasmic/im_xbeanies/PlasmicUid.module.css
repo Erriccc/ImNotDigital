@@ -1,0 +1,24 @@
+.uidStack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  min-width: 0;
+  padding: 8px;
+}
+.text {
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  text-align: left;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.slotTargetUIdInput {
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+}

@@ -8,6 +8,7 @@ import ClaimedRouteWorker from '../../components/claimedRouteWorker'
 import ClaimAction from "../../components/claimflow"
 
 import { useRouter } from 'next/navigation';
+import { PlasmicFlexPage } from "../../components/plasmic/im_xbeanies/PlasmicFlexPage";
 
 
 
@@ -34,8 +35,8 @@ async function ClaimNow(tagUid) {
       body: JSONdata,
     }
     const response = await fetch(endpoint, options)
-        const flexRoute = `${webRoute}flex/${nft.tagUid}`
-        router.push(flexRoute)
+    // {!(typeof window === undefined) && router.push(`/nfts/${tagUid}`)}
+    {router.push(`/claim/${tagUid}`)}
 
     
 }
@@ -51,15 +52,11 @@ useEffect(() => {
         
   const showClaimButton = async () => {
     console.log('')
-      if(nft?.claimed) {
+      {nft?.claimed ? (
         // console.log('claimed....')
         setIsUidVerified(true)
-        const flexRoute = `${webRoute}flex/${nft.tagUid}`
-        router.push(flexRoute)
-      }else{
-        console.log('not claimed')
-
-      } 
+        ): console.log('not claimed')}
+      return
   }
 
   showClaimButton()
@@ -69,44 +66,12 @@ useEffect(() => {
 },[isUidVerified]);
 
     return (
-      <main >
+      <>
        {/* select nft */}
-      <PlasmicClaimPage /* The claimpage component that encompasses the entirety of the claim page */
-            claimBeanieHeader={{claimText:`Claim Nft ${nft.tagUid} Detail`}} /* Header component, this will not be dynamic, just used as an example at first. claimText is the slot used for dynamic data based on the particular prop used */
-            claimButton={{ /* Claim button component */
-              isVerified:nft?.claimed,
-              onClick:() => {ClaimNow(nft.tagUid)}
-            }}
+      <PlasmicFlexPage /* The flexpage component that encompasses the entirety of the flex page */
+            uIdInput={nft.tagUid}
       />
-
-      {/* <div >
-        <header >
-          <h2 > Claim Nft {nft.id} Detail</h2>
-        </header>
-        <div >
-          <div>
-            <div>
-           
-              <div>UId</div>
-              <div>{nft.tagUid}</div>
-            </div>
-            <div>
-              <div>Issuer</div>
-              <div>{nft.issuer}</div>
-            </div>
-            <div>
-              <div>Claimed</div>
-              <div>{nft.claimed.toString()}</div>
-            </div>
-            <div>
-              <div>Owner</div>
-              <div>{nft.owner}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ClaimAction nftId={nft.tagUid} claimed={nft.claimed}/> */}
-       </main>
+      </>
     )
   }
   

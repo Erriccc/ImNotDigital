@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  position: relative;
+  width: 285px;
+  height: auto;
+}
+.slotTargetFlexPageHeaderText {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0em;
+}
