@@ -1,17 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import * as ph from "@plasmicapp/host";
 import { PlasmicClaimPage } from "../../components/plasmic/im_xbeanies/PlasmicClaimPage";
+// import { useRouter } from "next/router";
+
 import { getNftById } from "@/nftModel"
 import ClaimedRouteWorker from '../../components/claimedRouteWorker'
 import ClaimAction from "../../components/claimflow"
-import { ImmutableOrderStatus } from '@imtbl/imx-sdk';
+
 import { useRouter } from 'next/navigation';
+import { PlasmicFlexPage } from "../../components/plasmic/im_xbeanies/PlasmicFlexPage";
 
 
 
  function Nfts(props) {
     
     const nft = props.nft
+
     const [owner,setOwner] = useState("yo");
     const [isUidVerified,setIsUidVerified] = useState(false);
     const router = useRouter()
@@ -31,8 +35,8 @@ async function ClaimNow(tagUid) {
       body: JSONdata,
     }
     const response = await fetch(endpoint, options)
-        const flexRoute = `${webRoute}flex/${nft.tagUid}`
-        router.push(flexRoute)
+    // {!(typeof window === undefined) && router.push(`/nfts/${tagUid}`)}
+    {router.push(`/claim/${tagUid}`)}
 
     
 }
@@ -44,20 +48,15 @@ async function destroy(id) {
   router.push('/')
 }
 
-
 useEffect(() => {
         
   const showClaimButton = async () => {
     console.log('')
-      if(nft?.claimed) {
+      {nft?.claimed ? (
         // console.log('claimed....')
         setIsUidVerified(true)
-        const flexRoute = `${webRoute}flex/${nft.tagUid}`
-        router.push(flexRoute)
-      }else{
-        console.log('not claimed')
-
-      } 
+        ): console.log('not claimed')}
+      return
   }
 
   showClaimButton()
@@ -66,53 +65,19 @@ useEffect(() => {
 
 },[isUidVerified]);
 
-
     return (
-      <main >
-        <PlasmicClaimPage /* The claimpage component that encompasses the entirety of the claim page */
-            claimBeanieHeader={{claimText:`Claim Nft ${nft.tagUid} Detail`}} /* Header component, this will not be dynamic, just used as an example at first. claimText is the slot used for dynamic data based on the particular prop used */
-            claimButton={{ /* Claim button component */
-              isVerified:nft?.claimed,
-              onClick:() => {ClaimNow(nft.tagUid)}
-            }}
-      />
-
+      <>
        {/* select nft */}
-      {/* <div >
-        <header >
-          <h2 > Claim Nft {nft.id} Detail</h2>
-        </header>
-        <div >
-          <div>
-            <div>
-           
-              <div>UId</div>
-              <div>{nft.tagUid}</div>
-            </div>
-            <div>
-              <div>Issuer</div>
-              <div>{nft.issuer}</div>
-            </div>
-            <div>
-              <div>Claimed</div>
-              <div>{nft.claimed.toString()}</div>
-            </div>
-            <div>
-              <div>Owner</div>
-              <div>{nft.owner}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ClaimAction nftId={nft.tagUid} claimed={nft.claimed}/> */}
-       </main>
-       
+      <PlasmicFlexPage /* The flexpage component that encompasses the entirety of the flex page */
+            uIdInput={nft.tagUid}
+      />
+      </>
     )
   }
   
 
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async (context) => { /* This function retrieves the data from the database about the NFTs */
     const {params} = context;
     const id = params.nftId;
 

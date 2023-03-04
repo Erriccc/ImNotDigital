@@ -1,0 +1,238 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+.landingPage {
+  width: 408px;
+  height: 895px;
+  display: block;
+  flex-shrink: 0;
+}
+.rectangle1 {
+  background: rgba(255, 255, 255, 1);
+  width: 409px;
+  height: 895px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.text__u3IYn {
+  display: block;
+  font-size: 10px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 694px;
+  left: 147px;
+  width: 125px;
+  height: 11px;
+}
+.text__keveM {
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 664px;
+  left: 80px;
+  width: 261px;
+}
+.imnotArt5 {
+  background: url("/plasmic/im_xbeanies/images/imnotArt3.png") -10px -41px / 81px 90px no-repeat;
+  width: 60px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  top: 631px;
+  left: 171px;
+}
+.svg {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #000;
+  width: 408px;
+  height: 19px;
+  display: block;
+  top: 596px;
+  left: 0px;
+}
+.text__srJqh {
+  display: block;
+  font-size: undefinedpx;
+  text-align: center;
+  letter-spacing: 0em;
+  line-height: 100%;
+  position: absolute;
+  top: 497px;
+  left: 44px;
+  width: 323px;
+  height: 107px;
+  color: #000000;
+}
+.claimForFreeButton {
+  width: 137px;
+  height: 34px;
+  display: block;
+  position: absolute;
+  top: 435px;
+  left: 132px;
+}
+.rectangle8 {
+  background: rgba(29, 125, 20, 1);
+  width: 137px;
+  height: 34px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 4px 16px 0px #00000033;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 100px;
+}
+.text__wHgMi {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 114px;
+}
+.text__wXnkd {
+  display: block;
+  font-size: 18px;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 382px;
+  left: 118px;
+  width: 175px;
+  height: 21px;
+}
+.rectangle4 {
+  background: rgba(0, 0, 0, 1);
+  width: 169px;
+  height: 137px;
+  display: block;
+  position: absolute;
+  top: 223px;
+  left: 117px;
+}
+.text__u9I2X {
+  display: block;
+  font-size: 20px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 57px;
+  left: 16px;
+}
+.imnotArtEthdenverBeanie {
+  display: block;
+  font-size: 26px;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 87px;
+  left: 106px;
+  width: 193px;
+  height: 92px;
+  padding-left: 0px;
+}
+.imnotArt4 {
+  background: url("/plasmic/im_xbeanies/images/imnotArt3.png") -20px -70px / 160px 155px no-repeat;
+  width: 119px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 23px;
+}
+.text__klCNt {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 14px;
+  left: 292px;
+  width: 98px;
+  height: 25px;
+}
+.img__pPnXv {
+  position: absolute;
+  object-fit: scale-down;
+  max-width: none;
+  left: 368px;
+  top: 12px;
+  width: 27px;
+  height: 22px;
+}
+.img__pPnXv > picture > img {
+  object-fit: scale-down;
+}
+.img__pPnXv > :global(.__wab_img-spacer) > img {
+  object-fit: scale-down;
+}
+.img__sQxUp {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  width: 151px;
+  left: 131px;
+  top: 736px;
+}
+.img__sQxUp > picture > img {
+  object-fit: cover;
+}
+.img__sQxUp > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+}
+.text__enXV {
+  display: block;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 308px;
+  left: 18px;
+}

@@ -1,9 +1,11 @@
 //import Link from 'next/navigation'
-import { getNfts } from '@/lib/prisma/Nfts'
+import * as React from "react";
+import { getNfts } from '@/nftModel'
 import { Link, ImmutableXClient, MintableERC721TokenType } from '@imtbl/imx-sdk';
 import { ethers } from 'ethers';
 import { useEffect, useState } from 'react';
-
+import * as ph from "@plasmicapp/host";
+import { useRouter } from "next/router";
 //require('dotenv').config();
 const Nfts = (props) => {
   
@@ -29,7 +31,7 @@ const Nfts = (props) => {
    async function linkSetup() {
     const res = await link.setup({});
     setWallet(res.address);
-    setBalance(await client.getBalance({ user: res.address, tokenAddress: 'eth' }));
+  //  setBalance(await client.getBalance({ user: res.address, tokenAddress: 'eth' }));
 };
 
    // helper function to generate random ids
@@ -88,6 +90,10 @@ const Nfts = (props) => {
   };
 
   return (
+    <ph.PageParamsProvider
+      params={useRouter()?.query}
+      query={useRouter()?.query}
+    >
     <section >
       <div >
       <button onClick={linkSetup}>Setup</button>
@@ -115,6 +121,7 @@ const Nfts = (props) => {
         </label>
         <button onClick = {Clicked}>Mint</button>
     </section>
+    </ph.PageParamsProvider>
   )
 }
 

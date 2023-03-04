@@ -1,0 +1,57 @@
+.socials {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+}
+.socials > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(0px - 30px);
+  width: calc(100% + 30px);
+}
+.socials > :global(.__wab_flex-container) > *,
+.socials > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.socials > :global(.__wab_flex-container) > picture > img,
+.socials
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 30px;
+}
+.image4 {
+  background: url("/plasmic/im_xbeanies/images/image4.png") center center / cover no-repeat;
+  width: 20px;
+  height: 21px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.image5 {
+  background: url("/plasmic/im_xbeanies/images/image5.png") center center / cover no-repeat;
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.image6 {
+  background: url("/plasmic/im_xbeanies/images/image6.png") center center / cover no-repeat;
+  width: 22px;
+  height: 21px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  padding-bottom: 0px;
+  flex-shrink: 0;
+}
