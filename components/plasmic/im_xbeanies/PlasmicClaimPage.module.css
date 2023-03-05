@@ -99,7 +99,7 @@
   padding-right: 0px;
   flex-shrink: 0;
 }
-.walletConnectButton:global(.__wab_instance) {
+.registerWalletButton:global(.__wab_instance) {
   position: relative;
   top: auto;
   left: auto;

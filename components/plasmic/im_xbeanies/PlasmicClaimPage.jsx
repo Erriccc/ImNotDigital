@@ -21,7 +21,7 @@ import {
 import ImNotArtNav from "../../ImNotArtNav"; // plasmic-import: Xoe_b97VZI/component
 import ClaimBeanieHeader from "../../ClaimBeanieHeader"; // plasmic-import: UgLYtY_iEg/component
 import RoundBlackButton from "../../RoundBlackButton"; // plasmic-import: 4PjNop8mQb/component
-import WalletConnectButton from "../../WalletConnectButton"; // plasmic-import: 0SLk0MG_H_/component
+import RegisterWalletButton from "../../RegisterWalletButton"; // plasmic-import: 0SLk0MG_H_/component
 import ClaimButton from "../../ClaimButton"; // plasmic-import: SRxjb5uqQx/component
 import ImNotArtFooter from "../../ImNotArtFooter"; // plasmic-import: 1zyzTuVyET/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -207,12 +207,12 @@ function PlasmicClaimPage__RenderFunc(props) {
                     {"OR"}
                   </div>
 
-                  <WalletConnectButton
-                    data-plasmic-name={"walletConnectButton"}
-                    data-plasmic-override={overrides.walletConnectButton}
+                  <RegisterWalletButton
+                    data-plasmic-name={"registerWalletButton"}
+                    data-plasmic-override={overrides.registerWalletButton}
                     className={classNames(
                       "__wab_instance",
-                      sty.walletConnectButton
+                      sty.registerWalletButton
                     )}
                   />
 
@@ -270,7 +270,7 @@ const PlasmicDescendants = {
     "claimBeanieHeader",
     "roundBlackButton",
     "text",
-    "walletConnectButton",
+    "registerWalletButton",
     "claimButton",
     "pwrdImx",
     "poweredBy",
@@ -285,7 +285,7 @@ const PlasmicDescendants = {
     "claimBeanieHeader",
     "roundBlackButton",
     "text",
-    "walletConnectButton",
+    "registerWalletButton",
     "claimButton",
     "pwrdImx",
     "poweredBy",
@@ -299,7 +299,7 @@ const PlasmicDescendants = {
     "claimBeanieHeader",
     "roundBlackButton",
     "text",
-    "walletConnectButton",
+    "registerWalletButton",
     "claimButton",
     "pwrdImx",
     "poweredBy",
@@ -309,7 +309,7 @@ const PlasmicDescendants = {
   claimBeanieHeader: ["claimBeanieHeader"],
   roundBlackButton: ["roundBlackButton"],
   text: ["text"],
-  walletConnectButton: ["walletConnectButton"],
+  registerWalletButton: ["registerWalletButton"],
   claimButton: ["claimButton"],
   pwrdImx: ["pwrdImx", "poweredBy", "image3"],
   poweredBy: ["poweredBy"],
@@ -356,7 +356,7 @@ export const PlasmicClaimPage = Object.assign(
     claimBeanieHeader: makeNodeComponent("claimBeanieHeader"),
     roundBlackButton: makeNodeComponent("roundBlackButton"),
     text: makeNodeComponent("text"),
-    walletConnectButton: makeNodeComponent("walletConnectButton"),
+    registerWalletButton: makeNodeComponent("registerWalletButton"),
     claimButton: makeNodeComponent("claimButton"),
     pwrdImx: makeNodeComponent("pwrdImx"),
     poweredBy: makeNodeComponent("poweredBy"),

@@ -317,19 +317,6 @@
           "componentType": "component"
         },
         {
-          "id": "0SLk0MG_H_",
-          "name": "WalletConnectButton",
-          "type": "managed",
-          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
-          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicWalletConnectButton.jsx",
-          "importSpec": {
-            "modulePath": "WalletConnectButton.jsx"
-          },
-          "cssFilePath": "plasmic/im_xbeanies/PlasmicWalletConnectButton.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "2QbDyMolKpzt",
           "name": "ClaimPage",
           "type": "managed",
@@ -341,6 +328,19 @@
           "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimPage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "0SLk0MG_H_",
+          "name": "RegisterWalletButton",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicRegisterWalletButton.jsx",
+          "importSpec": {
+            "modulePath": "RegisterWalletButton.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicRegisterWalletButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
