@@ -91,6 +91,7 @@ function PlasmicClaimBeanieHeader__RenderFunc(props) {
             data-plasmic-name={"uid"}
             data-plasmic-override={overrides.uid}
             className={classNames("__wab_instance", sty.uid)}
+            uIdInput={"00:po:97:p0"}
           />
         </div>
       ) : null}

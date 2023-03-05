@@ -109,36 +109,28 @@ function PlasmicFlexPage__RenderFunc(props) {
             />
 
             {true ? (
+              <OwnerAddress
+                data-plasmic-name={"ownerAddress"}
+                data-plasmic-override={overrides.ownerAddress}
+                className={classNames("__wab_instance", sty.ownerAddress)}
+              />
+            ) : null}
+            {true ? (
               <div
-                data-plasmic-name={"metadata"}
-                data-plasmic-override={overrides.metadata}
-                className={classNames(projectcss.all, sty.metadata)}
+                data-plasmic-name={"uidStack"}
+                data-plasmic-override={overrides.uidStack}
+                className={classNames(projectcss.all, sty.uidStack)}
               >
                 {true ? (
-                  <OwnerAddress
-                    data-plasmic-name={"ownerAddress"}
-                    data-plasmic-override={overrides.ownerAddress}
-                    className={classNames("__wab_instance", sty.ownerAddress)}
+                  <Uid
+                    data-plasmic-name={"uid"}
+                    data-plasmic-override={overrides.uid}
+                    className={classNames("__wab_instance", sty.uid)}
+                    uIdInput={p.renderPlasmicSlot({
+                      defaultContents: "00:po:97:p0",
+                      value: args.uIdInput
+                    })}
                   />
-                ) : null}
-                {true ? (
-                  <div
-                    data-plasmic-name={"uidStack"}
-                    data-plasmic-override={overrides.uidStack}
-                    className={classNames(projectcss.all, sty.uidStack)}
-                  >
-                    {true ? (
-                      <Uid
-                        data-plasmic-name={"uid"}
-                        data-plasmic-override={overrides.uid}
-                        className={classNames("__wab_instance", sty.uid)}
-                        uIdInput={p.renderPlasmicSlot({
-                          defaultContents: "00:po:97:p0",
-                          value: args.uIdInput
-                        })}
-                      />
-                    ) : null}
-                  </div>
                 ) : null}
               </div>
             ) : null}
@@ -214,7 +206,6 @@ const PlasmicDescendants = {
     "imNotArtNav",
     "nftStack",
     "flexPageHeader",
-    "metadata",
     "ownerAddress",
     "uidStack",
     "uid",
@@ -231,7 +222,6 @@ const PlasmicDescendants = {
   nftStack: [
     "nftStack",
     "flexPageHeader",
-    "metadata",
     "ownerAddress",
     "uidStack",
     "uid",
@@ -239,7 +229,6 @@ const PlasmicDescendants = {
   ],
 
   flexPageHeader: ["flexPageHeader"],
-  metadata: ["metadata", "ownerAddress", "uidStack", "uid"],
   ownerAddress: ["ownerAddress"],
   uidStack: ["uidStack", "uid"],
   uid: ["uid"],
@@ -295,7 +284,6 @@ export const PlasmicFlexPage = Object.assign(
     imNotArtNav: makeNodeComponent("imNotArtNav"),
     nftStack: makeNodeComponent("nftStack"),
     flexPageHeader: makeNodeComponent("flexPageHeader"),
-    metadata: makeNodeComponent("metadata"),
     ownerAddress: makeNodeComponent("ownerAddress"),
     uidStack: makeNodeComponent("uidStack"),
     uid: makeNodeComponent("uid"),

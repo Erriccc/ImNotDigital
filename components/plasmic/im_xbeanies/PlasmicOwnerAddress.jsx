@@ -23,7 +23,7 @@ import sty from "./PlasmicOwnerAddress.module.css"; // plasmic-import: VpUVU_G7V
 
 export const PlasmicOwnerAddress__VariantProps = new Array();
 
-export const PlasmicOwnerAddress__ArgProps = new Array("addressInput");
+export const PlasmicOwnerAddress__ArgProps = new Array("children");
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -76,25 +76,17 @@ function PlasmicOwnerAddress__RenderFunc(props) {
         {"Owner:"}
       </div>
 
-      <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
-      >
-        {p.renderPlasmicSlot({
-          defaultContents: "Owner Address",
-          value: args.addressInput,
-          className: classNames(sty.slotTargetAddressInput)
-        })}
-      </div>
+      {p.renderPlasmicSlot({
+        defaultContents: "Owner Address",
+        value: args.children
+      })}
     </div>
   ) : null;
 }
 
 const PlasmicDescendants = {
-  ownerStack: ["ownerStack", "text", "freeBox"],
-  text: ["text"],
-  freeBox: ["freeBox"]
+  ownerStack: ["ownerStack", "text"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -131,7 +123,6 @@ export const PlasmicOwnerAddress = Object.assign(
   {
     // Helper components rendering sub-elements
     text: makeNodeComponent("text"),
-    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicOwnerAddress
     internalVariantProps: PlasmicOwnerAddress__VariantProps,
     internalArgProps: PlasmicOwnerAddress__ArgProps

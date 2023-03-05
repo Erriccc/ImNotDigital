@@ -135,19 +135,6 @@
           "componentType": "component"
         },
         {
-          "id": "0SLk0MG_H_",
-          "name": "WalletconnectButton",
-          "type": "managed",
-          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
-          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicWalletconnectButton.jsx",
-          "importSpec": {
-            "modulePath": "WalletconnectButton.jsx"
-          },
-          "cssFilePath": "plasmic/im_xbeanies/PlasmicWalletconnectButton.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "UgLYtY_iEg",
           "name": "ClaimBeanieHeader",
           "type": "managed",
@@ -326,6 +313,32 @@
             "modulePath": "OwnerAddress.jsx"
           },
           "cssFilePath": "plasmic/im_xbeanies/PlasmicOwnerAddress.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "bjbftCrCDc",
+          "name": "VerifiedToggle",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicVerifiedToggle.jsx",
+          "importSpec": {
+            "modulePath": "VerifiedToggle.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicVerifiedToggle.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "0SLk0MG_H_",
+          "name": "WalletConnectButton",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicWalletConnectButton.jsx",
+          "importSpec": {
+            "modulePath": "WalletConnectButton.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicWalletConnectButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

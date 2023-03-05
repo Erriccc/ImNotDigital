@@ -9,6 +9,7 @@
 // Plasmic Project: 8HMNFKnEv7gJ55SbTqvTiU
 // Component: sGix8KYNyE
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -70,16 +71,22 @@ function PlasmicMarketPlaces__RenderFunc(props) {
         sty.nfTmarkets
       )}
     >
-      <div
+      <p.PlasmicLink
         data-plasmic-name={"image1"}
         data-plasmic-override={overrides.image1}
-        className={classNames(projectcss.all, sty.image1)}
+        className={classNames(projectcss.all, projectcss.a, sty.image1)}
+        component={Link}
+        href={"https://opensea.io/"}
+        platform={"nextjs"}
       />
 
-      <div
+      <p.PlasmicLink
         data-plasmic-name={"image2"}
         data-plasmic-override={overrides.image2}
-        className={classNames(projectcss.all, sty.image2)}
+        className={classNames(projectcss.all, projectcss.a, sty.image2)}
+        component={Link}
+        href={"https://rarible.com/"}
+        platform={"nextjs"}
       />
     </p.Stack>
   );

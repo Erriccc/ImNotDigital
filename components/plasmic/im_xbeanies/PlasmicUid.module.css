@@ -3,11 +3,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   position: relative;
-  min-width: 0;
   padding: 8px;
 }
 .freeBox {

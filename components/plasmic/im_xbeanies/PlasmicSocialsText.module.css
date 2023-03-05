@@ -1,13 +1,15 @@
 .root {
-  display: inline-block;
-  font-size: 14px;
-  text-align: center;
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 1);
+  display: inline-flex;
+  position: relative;
   width: auto;
   height: auto;
-  position: relative;
+}
+.slotTargetSocialTextInput {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0em;
 }

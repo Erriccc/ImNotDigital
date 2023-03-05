@@ -18,16 +18,3 @@
   font-weight: 700;
   min-width: 0;
 }
-.freeBox {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 800px;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  min-width: 0;
-}
-.slotTargetAddressInput {
-  text-align: center;
-}

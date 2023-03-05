@@ -21,7 +21,7 @@ import {
 import ImNotArtNav from "../../ImNotArtNav"; // plasmic-import: Xoe_b97VZI/component
 import ClaimBeanieHeader from "../../ClaimBeanieHeader"; // plasmic-import: UgLYtY_iEg/component
 import RoundBlackButton from "../../RoundBlackButton"; // plasmic-import: 4PjNop8mQb/component
-import WalletconnectButton from "../../WalletconnectButton"; // plasmic-import: 0SLk0MG_H_/component
+import WalletConnectButton from "../../WalletConnectButton"; // plasmic-import: 0SLk0MG_H_/component
 import ClaimButton from "../../ClaimButton"; // plasmic-import: SRxjb5uqQx/component
 import ImNotArtFooter from "../../ImNotArtFooter"; // plasmic-import: 1zyzTuVyET/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -144,6 +144,55 @@ function PlasmicClaimPage__RenderFunc(props) {
                       "__wab_instance",
                       sty.roundBlackButton
                     )}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["customFunction"] = true
+                        ? (() => {
+                            const args = {
+                              customFunction: __wrapUserFunction(
+                                {
+                                  type: "InteractionArgLoc",
+                                  actionName: "customFunction",
+                                  interactionUuid: "XHxiclvWl",
+                                  componentUuid: "2QbDyMolKpzt",
+                                  argName: "customFunction"
+                                },
+                                () => () => {
+                                  return (window.location.href =
+                                    "https://www.imnotart.com");
+                                }
+                              )
+                            };
+                            return __wrapUserFunction(
+                              {
+                                type: "InteractionLoc",
+                                actionName: "customFunction",
+                                interactionUuid: "XHxiclvWl",
+                                componentUuid: "2QbDyMolKpzt"
+                              },
+                              () =>
+                                (({ customFunction }) => {
+                                  return customFunction();
+                                })?.apply(null, [args]),
+                              args
+                            );
+                          })()
+                        : undefined;
+                      if (
+                        typeof $steps["customFunction"] === "object" &&
+                        typeof $steps["customFunction"].then === "function"
+                      ) {
+                        $steps["customFunction"] = await __wrapUserPromise(
+                          {
+                            type: "InteractionLoc",
+                            actionName: "customFunction",
+                            interactionUuid: "XHxiclvWl",
+                            componentUuid: "2QbDyMolKpzt"
+                          },
+                          $steps["customFunction"]
+                        );
+                      }
+                    }}
                   />
 
                   <div
@@ -158,12 +207,12 @@ function PlasmicClaimPage__RenderFunc(props) {
                     {"OR"}
                   </div>
 
-                  <WalletconnectButton
-                    data-plasmic-name={"walletconnectButton"}
-                    data-plasmic-override={overrides.walletconnectButton}
+                  <WalletConnectButton
+                    data-plasmic-name={"walletConnectButton"}
+                    data-plasmic-override={overrides.walletConnectButton}
                     className={classNames(
                       "__wab_instance",
-                      sty.walletconnectButton
+                      sty.walletConnectButton
                     )}
                   />
 
@@ -221,7 +270,7 @@ const PlasmicDescendants = {
     "claimBeanieHeader",
     "roundBlackButton",
     "text",
-    "walletconnectButton",
+    "walletConnectButton",
     "claimButton",
     "pwrdImx",
     "poweredBy",
@@ -236,7 +285,7 @@ const PlasmicDescendants = {
     "claimBeanieHeader",
     "roundBlackButton",
     "text",
-    "walletconnectButton",
+    "walletConnectButton",
     "claimButton",
     "pwrdImx",
     "poweredBy",
@@ -250,7 +299,7 @@ const PlasmicDescendants = {
     "claimBeanieHeader",
     "roundBlackButton",
     "text",
-    "walletconnectButton",
+    "walletConnectButton",
     "claimButton",
     "pwrdImx",
     "poweredBy",
@@ -260,7 +309,7 @@ const PlasmicDescendants = {
   claimBeanieHeader: ["claimBeanieHeader"],
   roundBlackButton: ["roundBlackButton"],
   text: ["text"],
-  walletconnectButton: ["walletconnectButton"],
+  walletConnectButton: ["walletConnectButton"],
   claimButton: ["claimButton"],
   pwrdImx: ["pwrdImx", "poweredBy", "image3"],
   poweredBy: ["poweredBy"],
@@ -307,7 +356,7 @@ export const PlasmicClaimPage = Object.assign(
     claimBeanieHeader: makeNodeComponent("claimBeanieHeader"),
     roundBlackButton: makeNodeComponent("roundBlackButton"),
     text: makeNodeComponent("text"),
-    walletconnectButton: makeNodeComponent("walletconnectButton"),
+    walletConnectButton: makeNodeComponent("walletConnectButton"),
     claimButton: makeNodeComponent("claimButton"),
     pwrdImx: makeNodeComponent("pwrdImx"),
     poweredBy: makeNodeComponent("poweredBy"),

@@ -44,16 +44,19 @@ const Nfts = (props) => {
     // minting
     const [mintTokenId, setMintTokenId] = useState('');
     const [mintBlueprint, setMintBlueprint] = useState('');
-    const [mintTokenIdv2, setMintTokenIdv2] = useState('');
-    const [mintBlueprintv2, setMintBlueprintv2] = useState('');
+    // const [mintTokenIdv2, setMintTokenIdv2] = useState('');
+    // const [mintBlueprintv2, setMintBlueprintv2] = useState('');
 
     // the minting function should be on your backend
     async function mint() {
       // initialise a client with the minter for your NFT smart contract
       const provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.g.alchemy.com/v2/zgWQvQ8ya-dSrtnxKZYZuO-IWmoqc9hZ");
-    console.log(provider)
+      console.log(provider,'this is the provider, from pages/index.js')
       //const minterPrivateKey = process.env.REACT_APP_MINTER_PK ?? '';
       const minter = new ethers.Wallet("88d8da3d60d39c715581e31f37e387ca5d3fdfad6e1054af1eec9ea6e2e5e848").connect(provider);
+
+      console.log(minter,'this is the minter, from pages/index.js')
+
       const publicApiUrl ="https://api.sandbox.x.immutable.com/v1" ?? '';
       const starkContractAddress = "0x7917eDb51ecD6CdB3F9854c3cc593F33de10c623" ?? '';
       const registrationContractAddress = "0x1C97Ada273C9A52253f463042f29117090Cd7D83" ?? '';
@@ -63,7 +66,7 @@ const Nfts = (props) => {
           starkContractAddress,
           registrationContractAddress,
       });
-      console.log(minterClient)
+        console.log(minterClient,'this is the minterClient, from pages/index.js')
       // mint any number of NFTs to specified wallet address (must be registered on Immutable X first)
       const token_address = "0xf6877fA137BE8Dc0874afe5A199a39D83D1e41D1" ?? ''; // contract registered by Immutable
       const result = await minterClient.mint({
@@ -83,7 +86,7 @@ const Nfts = (props) => {
       });
       console.log(`Token minted: ${result.results[0].token_id}`);
     }
-  console.log(client)
+  console.log(client,'...this is the client from index.js')
 
   const Clicked = async () => {
     await mint()

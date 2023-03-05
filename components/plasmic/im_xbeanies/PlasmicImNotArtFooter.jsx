@@ -82,6 +82,55 @@ function PlasmicImNotArtFooter__RenderFunc(props) {
         data-plasmic-name={"imnotArt6"}
         data-plasmic-override={overrides.imnotArt6}
         className={classNames(projectcss.all, sty.imnotArt6)}
+        onClick={async event => {
+          const $steps = {};
+          $steps["customFunction"] = true
+            ? (() => {
+                const args = {
+                  customFunction: __wrapUserFunction(
+                    {
+                      type: "InteractionArgLoc",
+                      actionName: "customFunction",
+                      interactionUuid: "YLa6ySufG",
+                      componentUuid: "1zyzTuVyET",
+                      argName: "customFunction"
+                    },
+                    () => () => {
+                      return (window.location.href =
+                        "https://www.imnotart.com/");
+                    }
+                  )
+                };
+                return __wrapUserFunction(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "customFunction",
+                    interactionUuid: "YLa6ySufG",
+                    componentUuid: "1zyzTuVyET"
+                  },
+                  () =>
+                    (({ customFunction }) => {
+                      return customFunction();
+                    })?.apply(null, [args]),
+                  args
+                );
+              })()
+            : undefined;
+          if (
+            typeof $steps["customFunction"] === "object" &&
+            typeof $steps["customFunction"].then === "function"
+          ) {
+            $steps["customFunction"] = await __wrapUserPromise(
+              {
+                type: "InteractionLoc",
+                actionName: "customFunction",
+                interactionUuid: "YLa6ySufG",
+                componentUuid: "1zyzTuVyET"
+              },
+              $steps["customFunction"]
+            );
+          }
+        }}
       />
 
       <div
@@ -115,6 +164,55 @@ function PlasmicImNotArtFooter__RenderFunc(props) {
         displayMinHeight={"0"}
         displayMinWidth={"0"}
         displayWidth={"151px"}
+        onClick={async event => {
+          const $steps = {};
+          $steps["customFunction"] = true
+            ? (() => {
+                const args = {
+                  customFunction: __wrapUserFunction(
+                    {
+                      type: "InteractionArgLoc",
+                      actionName: "customFunction",
+                      interactionUuid: "OLjWrUopS",
+                      componentUuid: "1zyzTuVyET",
+                      argName: "customFunction"
+                    },
+                    () => () => {
+                      return (window.location.href =
+                        "https://www.ethdenver.com/");
+                    }
+                  )
+                };
+                return __wrapUserFunction(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "customFunction",
+                    interactionUuid: "OLjWrUopS",
+                    componentUuid: "1zyzTuVyET"
+                  },
+                  () =>
+                    (({ customFunction }) => {
+                      return customFunction();
+                    })?.apply(null, [args]),
+                  args
+                );
+              })()
+            : undefined;
+          if (
+            typeof $steps["customFunction"] === "object" &&
+            typeof $steps["customFunction"].then === "function"
+          ) {
+            $steps["customFunction"] = await __wrapUserPromise(
+              {
+                type: "InteractionLoc",
+                actionName: "customFunction",
+                interactionUuid: "OLjWrUopS",
+                componentUuid: "1zyzTuVyET"
+              },
+              $steps["customFunction"]
+            );
+          }
+        }}
         src={{
           src: "/plasmic/im_xbeanies/images/ethDenverLogopng.png",
           fullWidth: 1008,

@@ -1,0 +1,40 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  min-width: 0;
+  padding: 0px;
+}
+.text {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  width: auto;
+  height: 25px;
+}
+.img {
+  position: relative;
+  object-fit: scale-down;
+  max-width: none;
+  left: auto;
+  top: auto;
+  width: auto;
+  height: 20px;
+  z-index: auto;
+}
+.img > picture > img {
+  object-fit: scale-down;
+}
+.img > :global(.__wab_img-spacer) > img {
+  object-fit: scale-down;
+}

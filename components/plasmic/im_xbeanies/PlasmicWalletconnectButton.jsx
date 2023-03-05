@@ -19,11 +19,11 @@ import {
 } from "@plasmicapp/react-web";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_im_xbeanies.module.css"; // plasmic-import: 8HMNFKnEv7gJ55SbTqvTiU/projectcss
-import sty from "./PlasmicWalletconnectButton.module.css"; // plasmic-import: 0SLk0MG_H_/css
+import sty from "./PlasmicWalletConnectButton.module.css"; // plasmic-import: 0SLk0MG_H_/css
 
-export const PlasmicWalletconnectButton__VariantProps = new Array();
+export const PlasmicWalletConnectButton__VariantProps = new Array();
 
-export const PlasmicWalletconnectButton__ArgProps = new Array();
+export const PlasmicWalletConnectButton__ArgProps = new Array();
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -41,7 +41,7 @@ function useNextRouter() {
   return undefined;
 }
 
-function PlasmicWalletconnectButton__RenderFunc(props) {
+function PlasmicWalletConnectButton__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
@@ -109,13 +109,13 @@ function makeNodeComponent(nodeName) {
         deriveRenderOpts(props, {
           name: nodeName,
           descendantNames: [...PlasmicDescendants[nodeName]],
-          internalArgPropNames: PlasmicWalletconnectButton__ArgProps,
-          internalVariantPropNames: PlasmicWalletconnectButton__VariantProps
+          internalArgPropNames: PlasmicWalletConnectButton__ArgProps,
+          internalVariantPropNames: PlasmicWalletConnectButton__VariantProps
         }),
       [props, nodeName]
     );
 
-    return PlasmicWalletconnectButton__RenderFunc({
+    return PlasmicWalletConnectButton__RenderFunc({
       variants,
       args,
       overrides,
@@ -123,25 +123,25 @@ function makeNodeComponent(nodeName) {
     });
   };
   if (nodeName === "_0XAddressButton") {
-    func.displayName = "PlasmicWalletconnectButton";
+    func.displayName = "PlasmicWalletConnectButton";
   } else {
-    func.displayName = `PlasmicWalletconnectButton.${nodeName}`;
+    func.displayName = `PlasmicWalletConnectButton.${nodeName}`;
   }
   return func;
 }
 
-export const PlasmicWalletconnectButton = Object.assign(
-  // Top-level PlasmicWalletconnectButton renders the root element
+export const PlasmicWalletConnectButton = Object.assign(
+  // Top-level PlasmicWalletConnectButton renders the root element
   makeNodeComponent("_0XAddressButton"),
   {
     // Helper components rendering sub-elements
     rectangle7: makeNodeComponent("rectangle7"),
     connectWallet: makeNodeComponent("connectWallet"),
-    // Metadata about props expected for PlasmicWalletconnectButton
-    internalVariantProps: PlasmicWalletconnectButton__VariantProps,
-    internalArgProps: PlasmicWalletconnectButton__ArgProps
+    // Metadata about props expected for PlasmicWalletConnectButton
+    internalVariantProps: PlasmicWalletConnectButton__VariantProps,
+    internalArgProps: PlasmicWalletConnectButton__ArgProps
   }
 );
 
-export default PlasmicWalletconnectButton;
+export default PlasmicWalletConnectButton;
 /* prettier-ignore-end */

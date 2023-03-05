@@ -17,6 +17,7 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import VerifiedToggle from "../../VerifiedToggle"; // plasmic-import: bjbftCrCDc/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_im_xbeanies.module.css"; // plasmic-import: 8HMNFKnEv7gJ55SbTqvTiU/projectcss
 import sty from "./PlasmicImNotArtNav.module.css"; // plasmic-import: Xoe_b97VZI/css
@@ -75,53 +76,20 @@ function PlasmicImNotArtNav__RenderFunc(props) {
       />
 
       {true ? (
-        <div
-          data-plasmic-name={"freeBox"}
-          data-plasmic-override={overrides.freeBox}
-          className={classNames(projectcss.all, sty.freeBox)}
-        >
-          <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text
-            )}
-          >
-            {"Verified"}
-          </div>
-
-          <p.PlasmicImg
-            data-plasmic-name={"img"}
-            data-plasmic-override={overrides.img}
-            alt={""}
-            className={classNames(sty.img)}
-            displayHeight={"20px"}
-            displayMaxHeight={"none"}
-            displayMaxWidth={"none"}
-            displayMinHeight={"0"}
-            displayMinWidth={"0"}
-            displayWidth={"auto"}
-            src={{
-              src: "/plasmic/im_xbeanies/images/greencheckjpeg.jpeg",
-              fullWidth: 360,
-              fullHeight: 360,
-              aspectRatio: undefined
-            }}
-          />
-        </div>
+        <VerifiedToggle
+          data-plasmic-name={"verifiedToggle"}
+          data-plasmic-override={overrides.verifiedToggle}
+          className={classNames("__wab_instance", sty.verifiedToggle)}
+        />
       ) : null}
     </div>
   ) : null;
 }
 
 const PlasmicDescendants = {
-  nav: ["nav", "imnotArt4", "freeBox", "text", "img"],
+  nav: ["nav", "imnotArt4", "verifiedToggle"],
   imnotArt4: ["imnotArt4"],
-  freeBox: ["freeBox", "text", "img"],
-  text: ["text"],
-  img: ["img"]
+  verifiedToggle: ["verifiedToggle"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -158,9 +126,7 @@ export const PlasmicImNotArtNav = Object.assign(
   {
     // Helper components rendering sub-elements
     imnotArt4: makeNodeComponent("imnotArt4"),
-    freeBox: makeNodeComponent("freeBox"),
-    text: makeNodeComponent("text"),
-    img: makeNodeComponent("img"),
+    verifiedToggle: makeNodeComponent("verifiedToggle"),
     // Metadata about props expected for PlasmicImNotArtNav
     internalVariantProps: PlasmicImNotArtNav__VariantProps,
     internalArgProps: PlasmicImNotArtNav__ArgProps

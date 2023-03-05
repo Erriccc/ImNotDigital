@@ -80,6 +80,7 @@
 .roundBlackButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
+  margin-top: calc(20px + 30px) !important;
   flex-shrink: 0;
 }
 .text {
@@ -98,7 +99,7 @@
   padding-right: 0px;
   flex-shrink: 0;
 }
-.walletconnectButton:global(.__wab_instance) {
+.walletConnectButton:global(.__wab_instance) {
   position: relative;
   top: auto;
   left: auto;

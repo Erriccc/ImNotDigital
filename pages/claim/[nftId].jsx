@@ -1,28 +1,45 @@
 import React, {useState, useEffect} from 'react';
-import * as ph from "@plasmicapp/host";
 import { PlasmicClaimPage } from "../../components/plasmic/im_xbeanies/PlasmicClaimPage";
 import { getNftById } from "@/nftModel"
-import ClaimedRouteWorker from '../../components/claimedRouteWorker'
-import ClaimAction from "../../components/claimflow"
+import AppSetup from "@appSetup"
+import { Link, ImmutableXClient} from '@imtbl/imx-sdk';
 import { ImmutableOrderStatus } from '@imtbl/imx-sdk';
 import { useRouter } from 'next/navigation';
 
-
+ 
 
  function Nfts(props) {
     
     const nft = props.nft
-    const [owner,setOwner] = useState("yo");
+    const [owner,setOwner] = useState("ImNotArt");
     const [isUidVerified,setIsUidVerified] = useState(false);
+    const [client, setClient] = useState(Object);
+
     const router = useRouter()
-    const webRoute = `http://localhost:3000/`
-    const claimApiRoute = `/api/Claim`;
-    const delteApiRoute = `/api/EditNfts`;
+
+    // initialise Immutable X Link SDK
+    const link = new Link(process.env.REACT_APP_SANDBOX_LINK_URL);
+
+
+      // initialise an Immutable X Client to interact with apis more easily
+      async function buildIMX() {
+        const publicApiUrl = process.env.REACT_APP_SANDBOX_ENV_URL ?? '';
+        setClient(await ImmutableXClient.build({ publicApiUrl }));
+    }
+
+    // register and/or setup a user
+    async function linkSetup() {
+      console.log('setting up')
+      const res = await link.setup({});
+      // alert(res.address)
+      setOwner(res.address);
+    //  setBalance(await client.getBalance({ user: res.address, tokenAddress: 'eth' }));
+    };
 
 
 async function ClaimNow(tagUid) {
-    const JSONdata = JSON.stringify({tagUid:tagUid,claimed:true,owner:"devTest"})
-    const endpoint = `${claimApiRoute}` // "api/paymentHandler"
+    const JSONdata = JSON.stringify({tagUid:tagUid,claimed:true,owner:owner})
+    const endpoint = `${AppSetup.claimApiEndpoint}` // "api/paymentHandler"
     const options = {
       method: 'PUT',
       headers: {
@@ -31,35 +48,27 @@ async function ClaimNow(tagUid) {
       body: JSONdata,
     }
     const response = await fetch(endpoint, options)
-        const flexRoute = `${webRoute}flex/${nft.tagUid}`
-        router.push(flexRoute)
+    const flexRoute = `${AppSetup.webRoute}flex/${nft.tagUid}`
+    router.push(flexRoute)
 
     
-}
-
-async function destroy(id) {
-  await fetch(`${delteApiRoute}`, {
-    method: 'DELETE',
-  })
-  router.push('/')
 }
 
 
 useEffect(() => {
         
   const showClaimButton = async () => {
-    console.log('')
       if(nft?.claimed) {
-        // console.log('claimed....')
         setIsUidVerified(true)
-        const flexRoute = `${webRoute}flex/${nft.tagUid}`
+        const flexRoute = `${AppSetup.webRoute}flex/${nft.tagUid}`
         router.push(flexRoute)
       }else{
+        //build imx Client on load
+          {nft && buildIMX()};
         console.log('not claimed')
 
       } 
   }
-
   showClaimButton()
       return
 
@@ -69,42 +78,27 @@ useEffect(() => {
 
     return (
       <main >
-        <PlasmicClaimPage /* The claimpage component that encompasses the entirety of the claim page */
-            claimBeanieHeader={{claimText:`Claim Nft ${nft.tagUid} Detail`}} /* Header component, this will not be dynamic, just used as an example at first. claimText is the slot used for dynamic data based on the particular prop used */
-            claimButton={{ /* Claim button component */
-              isVerified:nft?.claimed,
-              onClick:() => {ClaimNow(nft.tagUid)}
-            }}
-      />
+        {nft &&
+          <PlasmicClaimPage /* The claimpage component that encompasses the entirety of the claim page */
+              claimBeanieHeader={{claimText:`Claim Nft ${nft.tagUid} Detail`}} /* Header component, this will not be dynamic, just used as an example at first. claimText is the slot used for dynamic data based on the particular prop used */
+              claimButton={{ /* Claim button component */
+                isVerified:nft?.claimed,
+                onClick:() => {ClaimNow(nft.tagUid)}
+              }}
+              walletConnectButton={{
+                onClick:() => {linkSetup()}
+              }}
+            />
+          }
 
        {/* select nft */}
-      {/* <div >
-        <header >
-          <h2 > Claim Nft {nft.id} Detail</h2>
-        </header>
-        <div >
-          <div>
-            <div>
-           
-              <div>UId</div>
-              <div>{nft.tagUid}</div>
-            </div>
-            <div>
-              <div>Issuer</div>
+      {/* 
               <div>{nft.issuer}</div>
-            </div>
-            <div>
-              <div>Claimed</div>
+              <div>{nft.tagUid}</div>
               <div>{nft.claimed.toString()}</div>
-            </div>
-            <div>
-              <div>Owner</div>
               <div>{nft.owner}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ClaimAction nftId={nft.tagUid} claimed={nft.claimed}/> */}
+      
+      */}
        </main>
        
     )
