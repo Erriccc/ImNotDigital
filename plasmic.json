@@ -29,19 +29,6 @@
       "cssFilePath": "plasmic/im_xbeanies/plasmic_im_xbeanies.module.css",
       "components": [
         {
-          "id": "2QbDyMolKpzt",
-          "name": "ClaimPage",
-          "type": "managed",
-          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
-          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicClaimPage.jsx",
-          "importSpec": {
-            "modulePath": "../pages/index.jsx"
-          },
-          "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimPage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "0XcyjVyUyT",
           "name": "FlexPage",
           "type": "managed",
@@ -341,6 +328,19 @@
           "cssFilePath": "plasmic/im_xbeanies/PlasmicWalletConnectButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "2QbDyMolKpzt",
+          "name": "ClaimPage",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicClaimPage.jsx",
+          "importSpec": {
+            "modulePath": "../pages/index.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicClaimPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
