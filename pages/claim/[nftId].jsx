@@ -85,7 +85,7 @@ useEffect(() => {
                 isVerified:nft?.claimed,
                 onClick:() => {ClaimNow(nft.tagUid)}
               }}
-              RegisterWalletButton={{
+              registerWalletButton={{
                 onClick:() => {linkSetup()}
               }}
             />
