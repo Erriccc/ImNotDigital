@@ -17,7 +17,6 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
-import Uid from "../../Uid"; // plasmic-import: 7GW8h_hViQ/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_im_xbeanies.module.css"; // plasmic-import: 8HMNFKnEv7gJ55SbTqvTiU/projectcss
 import sty from "./PlasmicClaimBeanieHeader.module.css"; // plasmic-import: UgLYtY_iEg/css
@@ -86,13 +85,6 @@ function PlasmicClaimBeanieHeader__RenderFunc(props) {
           >
             {"CLAIM YOUR DIGITAL BEANIE"}
           </div>
-
-          <Uid
-            data-plasmic-name={"uid"}
-            data-plasmic-override={overrides.uid}
-            className={classNames("__wab_instance", sty.uid)}
-            uIdInput={"00:po:97:p0"}
-          />
         </div>
       ) : null}
     </div>
@@ -100,10 +92,9 @@ function PlasmicClaimBeanieHeader__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "text", "uid"],
-  freeBox: ["freeBox", "text", "uid"],
-  text: ["text"],
-  uid: ["uid"]
+  root: ["root", "freeBox", "text"],
+  freeBox: ["freeBox", "text"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -141,7 +132,6 @@ export const PlasmicClaimBeanieHeader = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     text: makeNodeComponent("text"),
-    uid: makeNodeComponent("uid"),
     // Metadata about props expected for PlasmicClaimBeanieHeader
     internalVariantProps: PlasmicClaimBeanieHeader__VariantProps,
     internalArgProps: PlasmicClaimBeanieHeader__ArgProps

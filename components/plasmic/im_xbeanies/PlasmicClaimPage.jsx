@@ -20,6 +20,7 @@ import {
 } from "@plasmicapp/react-web";
 import ImNotArtNav from "../../ImNotArtNav"; // plasmic-import: Xoe_b97VZI/component
 import ClaimBeanieHeader from "../../ClaimBeanieHeader"; // plasmic-import: UgLYtY_iEg/component
+import Uid from "../../Uid"; // plasmic-import: 7GW8h_hViQ/component
 import RoundBlackButton from "../../RoundBlackButton"; // plasmic-import: 4PjNop8mQb/component
 import RegisterWalletButton from "../../RegisterWalletButton"; // plasmic-import: 0SLk0MG_H_/component
 import ClaimButton from "../../ClaimButton"; // plasmic-import: SRxjb5uqQx/component
@@ -135,6 +136,13 @@ function PlasmicClaimPage__RenderFunc(props) {
                       "__wab_instance",
                       sty.claimBeanieHeader
                     )}
+                  />
+
+                  <Uid
+                    data-plasmic-name={"uid"}
+                    data-plasmic-override={overrides.uid}
+                    className={classNames("__wab_instance", sty.uid)}
+                    uIdInput={"00:po:97:p0"}
                   />
 
                   <RoundBlackButton
@@ -268,6 +276,7 @@ const PlasmicDescendants = {
     "imNotArtNav",
     "buttonStack",
     "claimBeanieHeader",
+    "uid",
     "roundBlackButton",
     "text",
     "registerWalletButton",
@@ -283,6 +292,7 @@ const PlasmicDescendants = {
     "imNotArtNav",
     "buttonStack",
     "claimBeanieHeader",
+    "uid",
     "roundBlackButton",
     "text",
     "registerWalletButton",
@@ -297,6 +307,7 @@ const PlasmicDescendants = {
   buttonStack: [
     "buttonStack",
     "claimBeanieHeader",
+    "uid",
     "roundBlackButton",
     "text",
     "registerWalletButton",
@@ -307,6 +318,7 @@ const PlasmicDescendants = {
   ],
 
   claimBeanieHeader: ["claimBeanieHeader"],
+  uid: ["uid"],
   roundBlackButton: ["roundBlackButton"],
   text: ["text"],
   registerWalletButton: ["registerWalletButton"],
@@ -354,6 +366,7 @@ export const PlasmicClaimPage = Object.assign(
     imNotArtNav: makeNodeComponent("imNotArtNav"),
     buttonStack: makeNodeComponent("buttonStack"),
     claimBeanieHeader: makeNodeComponent("claimBeanieHeader"),
+    uid: makeNodeComponent("uid"),
     roundBlackButton: makeNodeComponent("roundBlackButton"),
     text: makeNodeComponent("text"),
     registerWalletButton: makeNodeComponent("registerWalletButton"),

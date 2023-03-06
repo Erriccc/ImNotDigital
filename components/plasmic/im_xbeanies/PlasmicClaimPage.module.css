@@ -22,6 +22,7 @@
   max-width: 100%;
   flex-grow: 0;
   flex-shrink: 1;
+  background: #ffffff;
   min-width: 0;
   min-height: 0;
   padding: 8px;
@@ -76,6 +77,10 @@
     top: auto;
     flex-shrink: 0;
   }
+}
+.uid:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
 }
 .roundBlackButton:global(.__wab_instance) {
   max-width: 100%;

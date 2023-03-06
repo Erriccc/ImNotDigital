@@ -2,9 +2,11 @@ import React, {useState, useEffect} from 'react';
 import { PlasmicClaimPage } from "../../components/plasmic/im_xbeanies/PlasmicClaimPage";
 import { getNftById } from "@/nftModel"
 import AppSetup from "@appSetup"
+import  ProcessingView from  '/components/ProcessingView';
 import { Link, ImmutableXClient} from '@imtbl/imx-sdk';
 import { ImmutableOrderStatus } from '@imtbl/imx-sdk';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
  
 
@@ -14,6 +16,8 @@ import { useRouter } from 'next/navigation';
     const [owner,setOwner] = useState("ImNotArt");
     const [isUidVerified,setIsUidVerified] = useState(false);
     const [client, setClient] = useState(Object);
+    const [validatingInput, setvalidatingInput] = useState(false);
+    const [minting, setMinting] = useState(false);
 
     const router = useRouter()
 
@@ -30,14 +34,30 @@ import { useRouter } from 'next/navigation';
     // register and/or setup a user
     async function linkSetup() {
       console.log('setting up')
-      const res = await link.setup({});
-      // alert(res.address)
-      setOwner(res.address);
+      setvalidatingInput(true)  //update loading state
+      let linkRes;
+      try{
+        linkRes= await link.setup({});
+        setOwner(linkRes.address);
+        console.log('res.. from metamask login', linkRes)
+        setvalidatingInput(false);  //update loading state
+        toast.success('success!')
+
+    }catch(e){
+      setvalidatingInput(false);  //update loading state
+      toast.error('wallet connection failed!')
+    }
+      
+     
     //  setBalance(await client.getBalance({ user: res.address, tokenAddress: 'eth' }));
     };
 
 
 async function ClaimNow(tagUid) {
+  
+    setMinting(true)  //update loading state
+
+
     const JSONdata = JSON.stringify({tagUid:tagUid,claimed:true,owner:owner})
     const endpoint = `${AppSetup.claimApiEndpoint}` // "api/paymentHandler"
     const options = {
@@ -47,11 +67,17 @@ async function ClaimNow(tagUid) {
       },
       body: JSONdata,
     }
-    const response = await fetch(endpoint, options)
     const flexRoute = `${AppSetup.webRoute}flex/${nft.tagUid}`
-    router.push(flexRoute)
 
-    
+      try{
+        await fetch(endpoint, options)
+        setMinting(false);  //update loading state
+        toast.success('asset claimed!')
+        router.push(flexRoute)
+      }catch(e){
+        setMinting(false);  //update loading state
+        toast.error(`Claim failed! ${e}`)
+      }
 }
 
 
@@ -78,6 +104,9 @@ useEffect(() => {
 
     return (
       <main >
+        {validatingInput && (<ProcessingView status={"connecting wallet.."} arrayToDisplay={["thank you for trying imNotDigital 🤝","don't forget to flex 🏋️ your Nft after you claim it 🤳🏽😚", "how can we improve?🐵🙈🤔"]}/>)}
+        {minting && (<ProcessingView status={"minting"} arrayToDisplay={["thank you for trying imNotDigital 🤝","don't forget to flex 🏋️ your Nft after you claim it 🤳🏽😚","how can we improve?🐵🙈🤔"]}/>)}
+
         {nft &&
           <PlasmicClaimPage /* The claimpage component that encompasses the entirety of the claim page */
               claimBeanieHeader={{claimText:`Claim Nft ${nft.tagUid} Detail`}} /* Header component, this will not be dynamic, just used as an example at first. claimText is the slot used for dynamic data based on the particular prop used */
@@ -85,6 +114,8 @@ useEffect(() => {
                 isVerified:nft?.claimed,
                 onClick:() => {ClaimNow(nft.tagUid)}
               }}
+              // uIdInput={nft.tagUid}
+              uid={{uIdInput:nft.tagUid}}
               registerWalletButton={{
                 onClick:() => {linkSetup()}
               }}
