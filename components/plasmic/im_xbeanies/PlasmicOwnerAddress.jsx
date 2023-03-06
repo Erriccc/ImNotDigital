@@ -65,6 +65,7 @@ function PlasmicOwnerAddress__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
         sty.ownerStack
       )}
     >
@@ -78,7 +79,8 @@ function PlasmicOwnerAddress__RenderFunc(props) {
 
       {p.renderPlasmicSlot({
         defaultContents: "Owner Address",
-        value: args.children
+        value: args.children,
+        className: classNames(sty.slotTargetChildren)
       })}
     </div>
   ) : null;

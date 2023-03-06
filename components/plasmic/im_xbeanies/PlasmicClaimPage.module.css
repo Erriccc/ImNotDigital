@@ -82,33 +82,8 @@
   max-width: 100%;
   position: relative;
 }
-.roundBlackButton:global(.__wab_instance) {
-  max-width: 100%;
+.commingSoonOrRegisterWallet:global(.__wab_instance) {
   position: relative;
-  margin-top: calc(20px + 30px) !important;
-  flex-shrink: 0;
-}
-.text {
-  display: block;
-  font-size: 24px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 1);
-  position: relative;
-  top: auto;
-  left: auto;
-  width: 29px;
-  height: 25px;
-  padding-right: 0px;
-  flex-shrink: 0;
-}
-.registerWalletButton:global(.__wab_instance) {
-  position: relative;
-  top: auto;
-  left: auto;
-  flex-shrink: 0;
 }
 .claimButton:global(.__wab_instance) {
   position: relative;

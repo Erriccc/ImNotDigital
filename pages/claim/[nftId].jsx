@@ -13,8 +13,10 @@ import { toast } from 'react-toastify';
  function Nfts(props) {
     
     const nft = props.nft
-    const [owner,setOwner] = useState("ImNotArt");
+    // const [owner,setOwner] = useState("ImNotArt");
+    const [owner,setOwner] = useState(undefined);
     const [isUidVerified,setIsUidVerified] = useState(false);
+    // const [ownerInfo,setOwnerInfo] = useState(false);
     const [client, setClient] = useState(Object);
     const [validatingInput, setvalidatingInput] = useState(false);
     const [minting, setMinting] = useState(false);
@@ -33,7 +35,6 @@ import { toast } from 'react-toastify';
 
     // register and/or setup a user
     async function linkSetup() {
-      console.log('setting up')
       setvalidatingInput(true)  //update loading state
       let linkRes;
       try{
@@ -41,7 +42,7 @@ import { toast } from 'react-toastify';
         setOwner(linkRes.address);
         console.log('res.. from metamask login', linkRes)
         setvalidatingInput(false);  //update loading state
-        toast.success('success!')
+        toast.success('wallet detected!')
 
     }catch(e){
       setvalidatingInput(false);  //update loading state
@@ -70,7 +71,7 @@ async function ClaimNow(tagUid) {
       try{
         await fetch(endpoint, options)
         setMinting(false);  //update loading state
-        toast.success('asset claimed!')
+        toast.success('asset minted!')
         router.push(flexRoute)
       }catch(e){
         setMinting(false);  //update loading state
@@ -83,7 +84,7 @@ useEffect(() => {
         
   const showClaimButton = async () => {
       if(nft?.claimed) {
-        setIsUidVerified(true)
+        setIsUidVerified(owner)
         const flexRoute = `${AppSetup.webRoute}flex/${nft.tagUid}`
         router.push(flexRoute)
       }else{
@@ -97,7 +98,7 @@ useEffect(() => {
       return
 
 
-},[isUidVerified]);
+},[isUidVerified,owner]);
 
 
     return (
@@ -109,14 +110,22 @@ useEffect(() => {
           <PlasmicClaimPage /* The claimpage component that encompasses the entirety of the claim page */
               claimBeanieHeader={{claimText:`Claim Nft ${nft.tagUid} Detail`}} /* Header component, this will not be dynamic, just used as an example at first. claimText is the slot used for dynamic data based on the particular prop used */
               claimButton={{ /* Claim button component */
-                isVerified:nft?.claimed,
+                canClaim:owner===undefined, // Boolean only sow the claim button if ownerInfo is already populated
                 onClick:() => {ClaimNow(nft.tagUid)}
               }}
-              // uIdInput={nft.tagUid}
-              uid={{uIdInput:nft.tagUid}}
-              registerWalletButton={{
-                onClick:() => {linkSetup()}
+              commingSoonOrRegisterWallet={{
+                connectedAddress:owner&&owner,
+                walletConnected:!(owner===undefined),
+                registerWalletButton:{
+                  ownerInfo:!(owner===undefined),
+                  onClick:() => {linkSetup()}
+                }
               }}
+              uid={{uIdInput:nft.tagUid}}
+              // registerWalletButton={{
+              //   ownerInfo:!(owner===undefined), //  Boolean change variant to updateWallet if user has registered their wallet
+              //   onClick:() => {linkSetup()}
+              // }}
             />
           }
 

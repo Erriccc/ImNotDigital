@@ -341,6 +341,19 @@
           "cssFilePath": "plasmic/im_xbeanies/PlasmicRegisterWalletButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "k4HYKP0cB3",
+          "name": "CommingSoonOrRegisterWallet",
+          "type": "managed",
+          "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+          "renderModuleFilePath": "plasmic/im_xbeanies/PlasmicCommingSoonOrRegisterWallet.jsx",
+          "importSpec": {
+            "modulePath": "CommingSoonOrRegisterWallet.jsx"
+          },
+          "cssFilePath": "plasmic/im_xbeanies/PlasmicCommingSoonOrRegisterWallet.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

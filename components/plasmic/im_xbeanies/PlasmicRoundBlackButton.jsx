@@ -66,6 +66,7 @@ function PlasmicRoundBlackButton__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
         sty.rectangle9
       )}
       ref={ref => {
@@ -73,32 +74,43 @@ function PlasmicRoundBlackButton__RenderFunc(props) {
       }}
     >
       {true ? (
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__drpTz
-          )}
+        <p.Stack
+          as={"div"}
+          data-plasmic-name={"freeBox"}
+          data-plasmic-override={overrides.freeBox}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox)}
         >
-          {"Coming Soon!"}
-        </div>
-      ) : null}
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__yXpI2
+            )}
+          >
+            {"</imnotArt> Wallet"}
+          </div>
 
-      <div
-        className={classNames(
-          projectcss.all,
-          projectcss.__wab_text,
-          sty.text__yXpI2
-        )}
-      >
-        {"</imnotArt> Wallet"}
-      </div>
+          {true ? (
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__drpTz
+              )}
+            >
+              {"Coming Soon!"}
+            </div>
+          ) : null}
+        </p.Stack>
+      ) : null}
     </button>
   );
 }
 
 const PlasmicDescendants = {
-  rectangle9: ["rectangle9"]
+  rectangle9: ["rectangle9", "freeBox"],
+  freeBox: ["freeBox"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -134,6 +146,7 @@ export const PlasmicRoundBlackButton = Object.assign(
   makeNodeComponent("rectangle9"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicRoundBlackButton
     internalVariantProps: PlasmicRoundBlackButton__VariantProps,
     internalArgProps: PlasmicRoundBlackButton__ArgProps

@@ -1,0 +1,76 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  min-width: 0;
+  padding: 8px;
+}
+.root > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin-top: calc(0px - 25px);
+  height: calc(100% + 25px);
+}
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 25px;
+}
+.freeBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+.slotTargetConnectedAddress {
+  color: var(--token-cL3kRMUsj);
+  text-align: center;
+  font-size: 12px;
+}
+.roundBlackButton:global(.__wab_instance) {
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.roundBlackButtonwalletConnected:global(.__wab_instance) {
+  flex-shrink: 0;
+  display: none;
+}
+.text {
+  display: block;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 29px;
+  height: 25px;
+  padding-right: 0px;
+  flex-shrink: 0;
+}
+.textwalletConnected {
+  display: none;
+}
+.registerWalletButton:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}
+.registerWalletButtonwalletConnected:global(.__wab_instance) {
+  flex-shrink: 0;
+}

@@ -1,5 +1,16 @@
 {
-  "props": [],
+  "props": [
+    {
+      "name": "addressColor",
+      "type": "color",
+      "value": "#535353",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "cL3kRMUsj"
+      }
+    }
+  ],
   "global": {
     "meta": {
       "source": "plasmic.app"

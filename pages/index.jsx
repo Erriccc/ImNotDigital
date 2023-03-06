@@ -6,14 +6,12 @@ import { ethers } from 'ethers';
 import { useEffect, useState } from 'react';
 import * as ph from "@plasmicapp/host";
 import { useRouter } from "next/router";
-//require('dotenv').config();
 const Nfts = (props) => {
   
   // initialise Immutable X Link SDK
-  const link = new Link(process.env.REACT_APP_SANDBOX_LINK_URL);
-
-   const [wallet, setWallet] = useState('undefined');
-     const [balance, setBalance] = useState(Object);
+    const link = new Link(process.env.REACT_APP_SANDBOX_LINK_URL);
+    const [wallet, setWallet] = useState('undefined');
+    const [balance, setBalance] = useState(Object);
     const [client, setClient] = useState(Object);
 
     //build imx Client on load

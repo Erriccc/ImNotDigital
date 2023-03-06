@@ -45,3 +45,6 @@
   -webkit-transition-property: all;
   -webkit-transition-duration: 1s;
 }
+.connectWalletownerInfo {
+  height: auto;
+}

@@ -22,7 +22,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_im_xbeanies.module.css"; // plasmic-import: 8HMNFKnEv7gJ55SbTqvTiU/projectcss
 import sty from "./PlasmicClaimButton.module.css"; // plasmic-import: SRxjb5uqQx/css
 
-export const PlasmicClaimButton__VariantProps = new Array("isVerified");
+export const PlasmicClaimButton__VariantProps = new Array("canClaim");
 
 export const PlasmicClaimButton__ArgProps = new Array();
 
@@ -58,11 +58,11 @@ function PlasmicClaimButton__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "isVerified",
+        path: "canClaim",
         type: "private",
         variableType: "variant",
         initFunc: true
-          ? ({ $props, $state, $queries, $ctx }) => $props.isVerified
+          ? ({ $props, $state, $queries, $ctx }) => $props.canClaim
           : undefined
       }
     ],
@@ -71,7 +71,7 @@ function PlasmicClaimButton__RenderFunc(props) {
   );
 
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
-  return (hasVariant($state, "isVerified", "isVerified") ? true : true) ? (
+  return (hasVariant($state, "canClaim", "canClaim") ? true : true) ? (
     <button
       data-plasmic-name={"rectangle8"}
       data-plasmic-override={overrides.rectangle8}
@@ -83,14 +83,9 @@ function PlasmicClaimButton__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
         sty.rectangle8,
-        {
-          [sty.rectangle8isVerified]: hasVariant(
-            $state,
-            "isVerified",
-            "isVerified"
-          )
-        }
+        { [sty.rectangle8canClaim]: hasVariant($state, "canClaim", "canClaim") }
       )}
       ref={ref => {
         $refs["rectangle8"] = ref;

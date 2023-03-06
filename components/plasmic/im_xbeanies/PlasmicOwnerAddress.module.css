@@ -18,3 +18,7 @@
   font-weight: 700;
   min-width: 0;
 }
+.slotTargetChildren {
+  font-size: 12px;
+  color: var(--token-cL3kRMUsj);
+}

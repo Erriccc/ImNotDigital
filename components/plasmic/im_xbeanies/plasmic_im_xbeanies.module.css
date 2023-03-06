@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Archivo%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Archivo+Black%3Aital%2Cwght%400%2C400&family=Archivo+Narrow%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700&display=swap");
 
+.plasmic_tokens {
+  --token-cL3kRMUsj: #535353;
+  --plasmic-token-address-color: var(--token-cL3kRMUsj);
+}
+
 .plasmic_default_styles {
   --mixin-UFjQdEkeNWXS_font-family: "Inter", sans-serif;
   --mixin-UFjQdEkeNWXS_font-size: 16px;

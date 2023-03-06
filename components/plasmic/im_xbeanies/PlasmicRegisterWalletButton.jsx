@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -21,7 +22,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_im_xbeanies.module.css"; // plasmic-import: 8HMNFKnEv7gJ55SbTqvTiU/projectcss
 import sty from "./PlasmicRegisterWalletButton.module.css"; // plasmic-import: 0SLk0MG_H_/css
 
-export const PlasmicRegisterWalletButton__VariantProps = new Array();
+export const PlasmicRegisterWalletButton__VariantProps = new Array("ownerInfo");
 
 export const PlasmicRegisterWalletButton__ArgProps = new Array();
 
@@ -54,6 +55,22 @@ function PlasmicRegisterWalletButton__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "ownerInfo",
+        type: "private",
+        variableType: "variant",
+        initFunc: true
+          ? ({ $props, $state, $queries, $ctx }) => $props.ownerInfo
+          : undefined
+      }
+    ],
+
+    [$props, $ctx]
+  );
+
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   return (
     <div
       data-plasmic-name={"_0XAddressButton"}
@@ -65,6 +82,7 @@ function PlasmicRegisterWalletButton__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
         sty._0XAddressButton
       )}
     >
@@ -74,7 +92,14 @@ function PlasmicRegisterWalletButton__RenderFunc(props) {
         className={classNames(
           projectcss.all,
           projectcss.button,
-          sty.rectangle7
+          sty.rectangle7,
+          {
+            [sty.rectangle7ownerInfo]: hasVariant(
+              $state,
+              "ownerInfo",
+              "ownerInfo"
+            )
+          }
         )}
         ref={ref => {
           $refs["rectangle7"] = ref;
@@ -86,10 +111,19 @@ function PlasmicRegisterWalletButton__RenderFunc(props) {
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.connectWallet
+            sty.connectWallet,
+            {
+              [sty.connectWalletownerInfo]: hasVariant(
+                $state,
+                "ownerInfo",
+                "ownerInfo"
+              )
+            }
           )}
         >
-          {"Register Wallet"}
+          {hasVariant($state, "ownerInfo", "ownerInfo")
+            ? "Update Wallet"
+            : "Register Wallet"}
         </div>
       </button>
     </div>
