@@ -47,8 +47,6 @@ import { toast } from 'react-toastify';
       setvalidatingInput(false);  //update loading state
       toast.error('wallet connection failed!')
     }
-      
-     
     //  setBalance(await client.getBalance({ user: res.address, tokenAddress: 'eth' }));
     };
 
