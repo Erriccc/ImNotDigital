@@ -37,6 +37,9 @@ import { PlasmicFlexPage } from "../../components/plasmic/im_xbeanies/PlasmicFle
        {/* select nft */}
       {nft?.claimed &&
       <PlasmicFlexPage /* The flexpage component that encompasses the entirety of the flex page */
+            imNotArtNav={{
+              imNotArtNavLogo:{href:AppSetup.webRoute}
+            }}
             uIdInput={nft.tagUid}
             ownerAddress={nft.owner}
       />

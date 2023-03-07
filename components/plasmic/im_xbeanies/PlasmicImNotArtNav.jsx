@@ -9,6 +9,7 @@
 // Plasmic Project: 8HMNFKnEv7gJ55SbTqvTiU
 // Component: Xoe_b97VZI
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
@@ -70,10 +71,16 @@ function PlasmicImNotArtNav__RenderFunc(props) {
         sty.nav
       )}
     >
-      <div
-        data-plasmic-name={"imnotArt4"}
-        data-plasmic-override={overrides.imnotArt4}
-        className={classNames(projectcss.all, sty.imnotArt4)}
+      <p.PlasmicLink
+        data-plasmic-name={"imNotArtNavLogo"}
+        data-plasmic-override={overrides.imNotArtNavLogo}
+        className={classNames(
+          projectcss.all,
+          projectcss.a,
+          sty.imNotArtNavLogo
+        )}
+        component={Link}
+        platform={"nextjs"}
       />
 
       {true ? (
@@ -88,8 +95,8 @@ function PlasmicImNotArtNav__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  nav: ["nav", "imnotArt4", "verifiedToggle"],
-  imnotArt4: ["imnotArt4"],
+  nav: ["nav", "imNotArtNavLogo", "verifiedToggle"],
+  imNotArtNavLogo: ["imNotArtNavLogo"],
   verifiedToggle: ["verifiedToggle"]
 };
 
@@ -126,7 +133,7 @@ export const PlasmicImNotArtNav = Object.assign(
   makeNodeComponent("nav"),
   {
     // Helper components rendering sub-elements
-    imnotArt4: makeNodeComponent("imnotArt4"),
+    imNotArtNavLogo: makeNodeComponent("imNotArtNavLogo"),
     verifiedToggle: makeNodeComponent("verifiedToggle"),
     // Metadata about props expected for PlasmicImNotArtNav
     internalVariantProps: PlasmicImNotArtNav__VariantProps,

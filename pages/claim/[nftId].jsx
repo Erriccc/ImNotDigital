@@ -105,7 +105,8 @@ async function ClaimNow(tagUid) {
             await Mint(mintIdReference)
             // web3MintPassed = true
           }catch(e){
-            alert(e)
+            // alert(e)
+            console.log(e)
             setMinting(false);  //update loading state
             toast.error(`Mint failed! ${e}`)
             return
@@ -118,7 +119,8 @@ async function ClaimNow(tagUid) {
           toast.success('asset minted!')
           router.push(flexRoute)
         }catch(e){
-          alert(e)
+          // alert(e)
+          console.log(e)
           setMinting(false);  //update loading state
           toast.error(`Claim failed! ${e}`)
         }
@@ -148,12 +150,15 @@ useEffect(() => {
 
     return (
       <main >
-        {validatingInput && (<ProcessingView status={"connecting wallet.."} arrayToDisplay={["thank you for trying imNotDigital 🤝","don't forget to flex 🏋️ your Nft after you claim it 🤳🏽😚", "how can we improve?🐵🙈🤔"]}/>)}
-        {minting && (<ProcessingView status={"minting"} arrayToDisplay={["thank you for trying imNotDigital 🤝","don't forget to flex 🏋️ your Nft after you claim it 🤳🏽😚","how can we improve?🐵🙈🤔"]}/>)}
-
+        {validatingInput && (<ProcessingView status={"connecting wallet.."} arrayToDisplay={["thank you for trying imNotDigital","don't forget to flex 🏋️ your Nft after you claim it 🤳🏽😚", "connecting....."]}/>)}
+        {minting && (<ProcessingView status={"minting"} arrayToDisplay={["minting.....","don't forget to flex 🏋️ your Nft after you claim it 🤳🏽😚","how can we improve?🐵🙈🤔"]}/>)}
+      
         {nft &&
           <PlasmicClaimPage /* The claimpage component that encompasses the entirety of the claim page */
               // claimBeanieHeader={{claimText:`Claim Nft ${nft.tagUid} Detail`}} /* Header component, this will not be dynamic, just used as an example at first. claimText is the slot used for dynamic data based on the particular prop used */
+              imNotArtNav={{
+                imNotArtNavLogo:{href:AppSetup.webRoute}
+              }}
               claimButton={{ /* Claim button component */
                 canClaim:owner===undefined, // Boolean only sow the claim button if ownerInfo is already populated
                 onClick:() => {ClaimNow(nft.tagUid)}
