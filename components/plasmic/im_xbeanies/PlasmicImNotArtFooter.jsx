@@ -221,15 +221,22 @@ function PlasmicImNotArtFooter__RenderFunc(props) {
           aspectRatio: undefined
         }}
       />
+
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      />
     </p.Stack>
   ) : null;
 }
 
 const PlasmicDescendants = {
-  footer: ["footer", "svg", "imnotArt6", "bigIanLogo"],
+  footer: ["footer", "svg", "imnotArt6", "bigIanLogo", "freeBox"],
   svg: ["svg"],
   imnotArt6: ["imnotArt6"],
-  bigIanLogo: ["bigIanLogo"]
+  bigIanLogo: ["bigIanLogo"],
+  freeBox: ["freeBox"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -268,6 +275,7 @@ export const PlasmicImNotArtFooter = Object.assign(
     svg: makeNodeComponent("svg"),
     imnotArt6: makeNodeComponent("imnotArt6"),
     bigIanLogo: makeNodeComponent("bigIanLogo"),
+    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicImNotArtFooter
     internalVariantProps: PlasmicImNotArtFooter__VariantProps,
     internalArgProps: PlasmicImNotArtFooter__ArgProps
