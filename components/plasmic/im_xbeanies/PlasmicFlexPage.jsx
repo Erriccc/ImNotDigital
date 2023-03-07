@@ -107,6 +107,19 @@ function PlasmicFlexPage__RenderFunc(props) {
               data-plasmic-name={"flexPageHeader"}
               data-plasmic-override={overrides.flexPageHeader}
               className={classNames("__wab_instance", sty.flexPageHeader)}
+              flexPageHeaderText={
+                <div
+                  data-plasmic-name={"imnotartEthdenverBeanie"}
+                  data-plasmic-override={overrides.imnotartEthdenverBeanie}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.imnotartEthdenverBeanie
+                  )}
+                >
+                  {"YOU'VE CLAIMED YOUR \nPHYGITAL BEANIE!"}
+                </div>
+              }
             />
 
             {true ? (
@@ -207,6 +220,7 @@ const PlasmicDescendants = {
     "imNotArtNav",
     "nftStack",
     "flexPageHeader",
+    "imnotartEthdenverBeanie",
     "ownerAddress",
     "uidStack",
     "uid",
@@ -223,13 +237,15 @@ const PlasmicDescendants = {
   nftStack: [
     "nftStack",
     "flexPageHeader",
+    "imnotartEthdenverBeanie",
     "ownerAddress",
     "uidStack",
     "uid",
     "videoNft"
   ],
 
-  flexPageHeader: ["flexPageHeader"],
+  flexPageHeader: ["flexPageHeader", "imnotartEthdenverBeanie"],
+  imnotartEthdenverBeanie: ["imnotartEthdenverBeanie"],
   ownerAddress: ["ownerAddress"],
   uidStack: ["uidStack", "uid"],
   uid: ["uid"],
@@ -285,6 +301,7 @@ export const PlasmicFlexPage = Object.assign(
     imNotArtNav: makeNodeComponent("imNotArtNav"),
     nftStack: makeNodeComponent("nftStack"),
     flexPageHeader: makeNodeComponent("flexPageHeader"),
+    imnotartEthdenverBeanie: makeNodeComponent("imnotartEthdenverBeanie"),
     ownerAddress: makeNodeComponent("ownerAddress"),
     uidStack: makeNodeComponent("uidStack"),
     uid: makeNodeComponent("uid"),

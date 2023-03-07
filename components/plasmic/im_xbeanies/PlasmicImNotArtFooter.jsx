@@ -155,10 +155,10 @@ function PlasmicImNotArtFooter__RenderFunc(props) {
       </div>
 
       <p.PlasmicImg
-        data-plasmic-name={"img"}
-        data-plasmic-override={overrides.img}
+        data-plasmic-name={"bigIanLogo"}
+        data-plasmic-override={overrides.bigIanLogo}
         alt={""}
-        className={classNames(sty.img)}
+        className={classNames(sty.bigIanLogo)}
         displayHeight={"auto"}
         displayMaxHeight={"none"}
         displayMaxWidth={"100%"}
@@ -215,9 +215,9 @@ function PlasmicImNotArtFooter__RenderFunc(props) {
           }
         }}
         src={{
-          src: "/plasmic/im_xbeanies/images/ethDenverLogopng.png",
-          fullWidth: 1008,
-          fullHeight: 987,
+          src: "/plasmic/im_xbeanies/images/aLogoBlackpng.png",
+          fullWidth: 573,
+          fullHeight: 333,
           aspectRatio: undefined
         }}
       />
@@ -226,10 +226,10 @@ function PlasmicImNotArtFooter__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  footer: ["footer", "svg", "imnotArt6", "img"],
+  footer: ["footer", "svg", "imnotArt6", "bigIanLogo"],
   svg: ["svg"],
   imnotArt6: ["imnotArt6"],
-  img: ["img"]
+  bigIanLogo: ["bigIanLogo"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -267,7 +267,7 @@ export const PlasmicImNotArtFooter = Object.assign(
     // Helper components rendering sub-elements
     svg: makeNodeComponent("svg"),
     imnotArt6: makeNodeComponent("imnotArt6"),
-    img: makeNodeComponent("img"),
+    bigIanLogo: makeNodeComponent("bigIanLogo"),
     // Metadata about props expected for PlasmicImNotArtFooter
     internalVariantProps: PlasmicImNotArtFooter__VariantProps,
     internalArgProps: PlasmicImNotArtFooter__ArgProps

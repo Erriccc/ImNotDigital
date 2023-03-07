@@ -68,7 +68,7 @@
   top: auto;
   left: auto;
   margin-right: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   flex-shrink: 0;
 }
 @media (min-width: 768px) {

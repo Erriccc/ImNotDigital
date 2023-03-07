@@ -1,0 +1,46 @@
+.claimed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  background: var(--token-F-v_j4Jmt);
+  cursor: pointer;
+  backdrop-filter: none;
+  filter: none;
+  transform: translateX(0px) translateY(0px) translateZ(0px);
+  transition-property: all;
+  transition-duration: 0.5s;
+  min-width: 0;
+  -webkit-backdrop-filter: none;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid var(--token-x-NrAXR63);
+}
+.claimedunclaimedButton {
+  background: var(--token-UrAIHZ9j0);
+  border-color: var(--token-qtW639nV2);
+}
+.claimedbaseActive {
+  background: var(--token-uGp2JQzKX);
+}
+.claimed:hover {
+  background: var(--token-uGp2JQzKX);
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  text-align: center;
+  color: var(--token-29YNJvTgX);
+  min-width: 0;
+}
+.textunclaimedButton {
+  color: var(--token-vnAqO7ykp);
+}

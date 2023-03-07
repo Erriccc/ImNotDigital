@@ -3,6 +3,24 @@
 .plasmic_tokens {
   --token-cL3kRMUsj: #535353;
   --plasmic-token-address-color: var(--token-cL3kRMUsj);
+  --token-29YNJvTgX: var(--token-x-NrAXR63);
+  --plasmic-token-landing-paage: var(--token-29YNJvTgX);
+  --token-x-NrAXR63: #36b307;
+  --plasmic-token-landing-claimed-text: var(--token-x-NrAXR63);
+  --token-vnAqO7ykp: var(--token-qtW639nV2);
+  --plasmic-token-unnamed-style-token: var(--token-vnAqO7ykp);
+  --token-qtW639nV2: #b3ad07;
+  --plasmic-token-landing-page-unclaimed-text: var(--token-qtW639nV2);
+  --token-F-v_j4Jmt: #53e78c8c;
+  --plasmic-token-landing-claimed-button-green-variant-bg: var(
+    --token-F-v_j4Jmt
+  );
+  --token-UrAIHZ9j0: #e2e7538c;
+  --plasmic-token-unclaimed-button-bg: var(--token-UrAIHZ9j0);
+  --token-uGp2JQzKX: #ffffff;
+  --plasmic-token-white: var(--token-uGp2JQzKX);
+  --token-AjZrpWiSZ: 3px;
+  --plasmic-token-landing-page-line: var(--token-AjZrpWiSZ);
 }
 
 .plasmic_default_styles {

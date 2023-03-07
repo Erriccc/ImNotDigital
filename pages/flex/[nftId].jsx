@@ -1,5 +1,5 @@
 import React, {useState, useEffect,useLayoutEffect} from 'react';
-import AppSetup from "@appSetup"
+import AppSetup from "@appSetupClient"
 import { getNftById } from "@/nftModel"
 import { useRouter } from 'next/navigation';
 import { PlasmicFlexPage } from "../../components/plasmic/im_xbeanies/PlasmicFlexPage";
@@ -16,18 +16,18 @@ import { PlasmicFlexPage } from "../../components/plasmic/im_xbeanies/PlasmicFle
 
     useLayoutEffect(() => {
         
-  const routeToClaim = async () => {
-    if(!nft?.claimed){
-      const claimRoute = `${AppSetup.webRoute}claim/${nft.tagUid}`
-        router.push(claimRoute)
-    }else{
-      setIsUidVerified(true)
+      const routeToClaim = async () => {
+        if(!nft?.claimed){
+          const claimRoute = `${AppSetup.webRoute}claim/${nft.tagUid}`
+            router.push(claimRoute)
+        }else{
+          setIsUidVerified(true)
+          }
+          return
       }
-      return
-  }
 
-  routeToClaim()
-      return
+      routeToClaim()
+          return
 
 
 },[isUidVerified]);

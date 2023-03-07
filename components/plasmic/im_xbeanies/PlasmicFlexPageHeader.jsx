@@ -21,7 +21,9 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_im_xbeanies.module.css"; // plasmic-import: 8HMNFKnEv7gJ55SbTqvTiU/projectcss
 import sty from "./PlasmicFlexPageHeader.module.css"; // plasmic-import: NlSaXhOoqK/css
 
-export const PlasmicFlexPageHeader__VariantProps = new Array();
+export const PlasmicFlexPageHeader__VariantProps = new Array(
+  "unnamedGroupOfVariants"
+);
 
 export const PlasmicFlexPageHeader__ArgProps = new Array("flexPageHeaderText");
 
@@ -54,6 +56,23 @@ function PlasmicFlexPageHeader__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "unnamedGroupOfVariants",
+        type: "private",
+        variableType: "variant",
+        initFunc: true
+          ? ({ $props, $state, $queries, $ctx }) =>
+              $props.unnamedGroupOfVariants
+          : undefined
+      }
+    ],
+
+    [$props, $ctx]
+  );
+
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   return (
     <div
       data-plasmic-name={"root"}
@@ -84,9 +103,9 @@ function PlasmicFlexPageHeader__RenderFunc(props) {
                 className={"plasmic_default__all plasmic_default__span"}
                 style={{ color: "#000000" }}
               >
-                {"IMNOTART "}
+                {"IMNOTART"}
               </span>
-              <React.Fragment>{"ETHDENVER BEANIE!"}</React.Fragment>
+              <React.Fragment>{" BEANIE!"}</React.Fragment>
             </React.Fragment>
           </div>
         ),

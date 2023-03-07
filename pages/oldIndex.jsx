@@ -19,6 +19,7 @@ const Nfts = (props) => {
     //build imx Client on load
     useEffect(() => {
         buildIMX();
+        
     }, []);
 
     // initialise an Immutable X Client to interact with apis more easily

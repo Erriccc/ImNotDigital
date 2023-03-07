@@ -1,6 +1,16 @@
 {
   "props": [
     {
+      "name": "UnnamedStyleToken",
+      "type": "color",
+      "value": "#B3AD07",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "vnAqO7ykp"
+      }
+    },
+    {
       "name": "addressColor",
       "type": "color",
       "value": "#535353",
@@ -8,6 +18,76 @@
       "meta": {
         "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
         "id": "cL3kRMUsj"
+      }
+    },
+    {
+      "name": "landingClaimedButtonGreenVariantBg",
+      "type": "color",
+      "value": "#53E78C8C",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "F-v_j4Jmt"
+      }
+    },
+    {
+      "name": "landingClaimedText",
+      "type": "color",
+      "value": "#36B307",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "x-NrAXR63"
+      }
+    },
+    {
+      "name": "landingPaage",
+      "type": "color",
+      "value": "#36B307",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "29YNJvTgX"
+      }
+    },
+    {
+      "name": "landingPageLine",
+      "type": "spacing",
+      "value": "3px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "AjZrpWiSZ"
+      }
+    },
+    {
+      "name": "landingPageUnclaimedText",
+      "type": "color",
+      "value": "#B3AD07",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "qtW639nV2"
+      }
+    },
+    {
+      "name": "unclaimedButtonBg",
+      "type": "color",
+      "value": "#E2E7538C",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "UrAIHZ9j0"
+      }
+    },
+    {
+      "name": "white",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "8HMNFKnEv7gJ55SbTqvTiU",
+        "id": "uGp2JQzKX"
       }
     }
   ],

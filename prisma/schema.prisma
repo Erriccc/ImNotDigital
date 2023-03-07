@@ -28,3 +28,14 @@ model Collectible {
   claimed Boolean @default(false)
   owner String  @default("User X")
 }
+
+model ImNotDigital {
+  id      String   @id @default(auto()) @map("_id") @db.ObjectId
+  tagUid   String   @unique
+  mintId   Int?
+  mediaUrl String @default("https://gateway.pinata.cloud/ipfs/QmREjM3TDrG931ecoNXMifpnVruFnzgw6Rv3DRpECLvVRp?_gl=1*6yrfy5*_ga*MTgzOTY5NDM1Mi4xNjc2NzUwMzUz*_ga_5RMPXG14TE*MTY3NzAzNDkzNy41LjAuMTY3NzAzNDk0MC41Ny4wLjA.%22,")
+  metadataUrl String  @default("https://gateway.pinata.cloud/ipfs/QmSCJbe6VExxGmvdTLbvmLub3ESgDdDwYuxr3X57yD3bs4/1")
+  issuer  String  @default("imNotArt")
+  claimed Boolean @default(false)
+  owner String  @default("User X")
+}

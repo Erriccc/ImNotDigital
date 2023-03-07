@@ -70,22 +70,29 @@ function PlasmicVideoNft__RenderFunc(props) {
         sty.rectangle5
       )}
     >
-      <div
-        data-plasmic-name={"text"}
-        data-plasmic-override={overrides.text}
-        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
-      >
-        {"IMAGE/VIDEO"}
-      </div>
+      {true ? (
+        <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text
+          )}
+        >
+          {"IMAGE/VIDEO"}
+        </div>
+      ) : null}
 
       <Video
         data-plasmic-name={"htmlVideo"}
         data-plasmic-override={overrides.htmlVideo}
         autoPlay={true}
         className={classNames("__wab_instance", sty.htmlVideo)}
-        controls={true}
+        controls={false}
         muted={true}
-        src={"https://vimeo.com/804521270"}
+        poster={"/plasmic/im_xbeanies/images/beanieArtpicjpeg.jpeg"}
+        src={"https://twitter.com/i/status/1626315640507183105"}
       />
     </div>
   );
