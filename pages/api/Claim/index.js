@@ -29,13 +29,13 @@ const handler = async (req, res) => {
       console.log(req.body,'req.body......')
       
 
-          try{ 
-            console.log('minting web3 from server')
-            await Mint(mintIdReference,owner,metadataUrl)
-          }catch(e){
-            console.log(e)
-            return  res.status(500).json({ error: error.message })
-          }
+          // try{ 
+          //   console.log('minting web3 from server')
+          //   await Mint(mintIdReference,owner,metadataUrl)
+          // }catch(e){
+          //   console.log(e)
+          //   return  res.status(500).json({ error: error.message })
+          // }
 
       const { nfts, error } = await updateNftById(tagUid, {update:{owner,claimed}})
       if (error) throw new Error(error)
