@@ -9,11 +9,12 @@
 // }
  
 // Claim Service 
-import { deleteNftById, getNfts, updateNftById } from '@/nftModel'
+const { deleteNftById, getNfts, updateNftById } = require('@/nftModel')
+const  { ethers }=require( "ethers"); // from hardhat throws error "Can't resolve 'console'"
 
-import { ethers } from 'ethers';
-import { Link, ImmutableXClient,MintableERC721TokenType} from '@imtbl/imx-sdk';
-import AppSetup from "@appSetupServer"
+// import { ethers } from 'ethers';
+const { Link, ImmutableXClient,MintableERC721TokenType} = require('@imtbl/imx-sdk');
+const AppSetup = require("@appSetupServer") 
 
 const handler = async (req, res) => {
   if (req.method === 'PUT') {
@@ -24,6 +25,8 @@ const handler = async (req, res) => {
       const claimed = req.body.claimed
       const metadataUrl = req.body.metadataUrl
       const mintIdReference = Date.now();
+
+      console.log(req.body,'req.body......')
       
 
           try{ 
