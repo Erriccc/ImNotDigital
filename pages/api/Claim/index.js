@@ -13,7 +13,7 @@ const { deleteNftById, getNfts, updateNftById } = require('@/nftModel')
 const  { ethers }=require( "ethers"); // from hardhat throws error "Can't resolve 'console'"
 
 // import { ethers } from 'ethers';
-const { Link, ImmutableXClient,MintableERC721TokenType} = require('@imtbl/imx-sdk');
+const {ImmutableXClient,MintableERC721TokenType} = require('@imtbl/imx-sdk');
 const AppSetup = require("@appSetupServer") 
 
 const handler = async (req, res) => {
@@ -29,13 +29,13 @@ const handler = async (req, res) => {
       console.log(req.body,'req.body......')
       
 
-          // try{ 
-          //   console.log('minting web3 from server')
-          //   await Mint(mintIdReference,owner,metadataUrl)
-          // }catch(e){
-          //   console.log(e)
-          //   return  res.status(500).json({ error: error.message })
-          // }
+          try{ 
+            console.log('minting web3 from server')
+            await Mint(mintIdReference,owner,metadataUrl)
+          }catch(e){
+            console.log(e)
+            return  res.status(500).json({ error: error.message })
+          }
 
       const { nfts, error } = await updateNftById(tagUid, {update:{owner,claimed}})
       if (error) throw new Error(error)
