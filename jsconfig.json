@@ -7,7 +7,7 @@
       "@/nftModel":["/lib/prisma/ImNotDigital"],
       "@appSetupClient":["./customAppSettingsClient"],
       "@appSetupServer":["./customAppSettingsServer"],
-      "@plasmic/*":["./components/plasmic/im_xbeanies/*"],
+      "@plasmic/*":["./components/plasmic/im_xbeanies/*"]
     }
   }
 }

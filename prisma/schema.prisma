@@ -10,25 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-model Nft {
-  id      String   @id @default(auto()) @map("_id") @db.ObjectId
-  tagUid   String   @unique
-  owner    String?
-  issuer    String
-  claimed    Boolean   @default(false)
-}
-
-model Collectible {
-  id      String   @id @default(auto()) @map("_id") @db.ObjectId
-  tagUid   String   @unique
-  imageUrl String @default("https://gateway.pinata.cloud/ipfs/QmREjM3TDrG931ecoNXMifpnVruFnzgw6Rv3DRpECLvVRp?_gl=1*6yrfy5*_ga*MTgzOTY5NDM1Mi4xNjc2NzUwMzUz*_ga_5RMPXG14TE*MTY3NzAzNDkzNy41LjAuMTY3NzAzNDk0MC41Ny4wLjA.%22,")
-  metadataUrl String  @default("N/A")
-  issuer  String  @default("imNotArt")
-  claimed Boolean @default(false)
-  owner String  @default("User X")
-}
-
 model ImNotDigital {
   id      String   @id @default(auto()) @map("_id") @db.ObjectId
   tagUid   String   @unique
